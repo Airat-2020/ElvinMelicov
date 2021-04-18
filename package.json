@@ -71,7 +71,7 @@
         "yargs": "^15.4.1"
     },
     "dependencies": {
-        "smart-grid": "^2.1.2"
+        "bootstrap": "^4.6.0"
     },
     "husky": {
         "hooks": {
