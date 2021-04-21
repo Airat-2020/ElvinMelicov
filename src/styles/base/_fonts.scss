@@ -1,0 +1,23 @@
+/* gilroy-regular*/
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Gilroy";
+  src:
+  local('Gilroy'), local('Gilroy-Regular'),
+  url("../../fonts/gilroy-regular.woff2")  format("woff2"),
+  url("../../fonts/gilroy-regular.woff")  format("woff");
+  font-display: swap;
+}
+
+/* roboto-regular*/
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Roboto";
+  src:
+  local("Roboto"), local("Roboto-Regular"),
+  url("../../fonts/roboto-regular.woff2") format("woff2");
+  url("../../fonts/roboto-regular.woff") format("woff");
+  font-display: swap;
+}
