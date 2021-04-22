@@ -1,0 +1,35 @@
+.btn{
+    $ff: $font-family-heading;
+    $fw: 900;
+
+    &--sm {
+        $fs: 18px;
+        $lh: 23px;
+        $bgc: $button-appointment;
+        $color: $btc-1;
+        box-shadow: 0 4px 0 $button-shadow-1;
+    }
+
+    &--lg{
+        $fs: 20px;
+        $lh: 25px;
+        $bgc: $button-appointment;
+        $color: $btc-1;
+        box-shadow: 0 4px 0 $button-shadow-1;
+    }
+
+    &--ok{
+        $fs: 20px;
+        $lh: 25px;
+        $bgc: $button-ok;
+        $color: $btc-1;
+        box-shadow: 0 4px 0 $button-shadow-2;
+    }
+
+    &--more{
+        $fs: 14px;
+        $lh: 17px;
+        $color: $button-more;
+    }
+}
+

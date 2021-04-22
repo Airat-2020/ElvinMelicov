@@ -6,6 +6,14 @@ $font-family-text-body: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "
 "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
 "Segoe UI Symbol";
 
+//abbreviations
+$fw: font-weight;
+$fs: font-size;
+$ff: font-family;
+$lh: line-height;
+$color: color;
+$bgc: background-color;
+
 //colors
 //
 //basics-text-colors
@@ -30,4 +38,8 @@ $button-ok: linear-gradient(180deg, #2ec061 0%, #13a546 100%);
 $button-more: #0095e5;
 
 //strip-under-headings
-$strip: linear-gradient(90deg, #0095e5 50%, #E30613 50%);;
+$strip: linear-gradient(90deg, #0095e5 50%, #e30613 50%);
+
+//shadow
+$button-shadow-1: #820e15;
+$button-shadow-2: #136d33;
