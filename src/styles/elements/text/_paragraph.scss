@@ -1,0 +1,37 @@
+/*
+  Стили для параграфов
+*/
+
+.p{
+  @include text-body(
+     $fs: 14px,
+      $lh: 21px
+  );
+  @include media-breakpoint-up(lg) {
+      $fs: 18px;
+      $lh: 27px;
+  }
+
+  &--sm{
+    @include text-body(
+      $color: $btc-1,
+      $fs: 12px,
+      $lh: 18px
+    );
+    @include media-breakpoint-up(lg) {
+      $fs: 16px;
+      $lh: 24px;
+    }
+  }
+
+  &--lg{
+    @include text-body(
+      $fs: 16px,
+      $lh: 24px
+    );
+    @include media-breakpoint-up(lg) {
+      $fs: 14px;
+      $lh: 21px;
+    }
+  }
+}

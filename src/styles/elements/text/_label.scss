@@ -1,0 +1,39 @@
+/*
+  Стили для лейблов
+*/
+
+.label--text{
+  @include text-body(
+    $fs: 12px,
+    $lh: 18px,
+    $fw: 400
+  );
+
+  @include media-breakpoint-up(lg) {
+    $fs: 16px;
+    $lh: 24px;
+    $fw: 400;
+  }
+}
+
+.label--checkbox {
+  @include text-body(
+   $fs: 12px,
+   $lh: 14px,
+   $fw: 700
+  );
+}
+
+.label--file {
+  @include text-body(
+    $fs: 16px,
+    $lh: 24px,
+    $fw: 300
+  );
+
+  @include media-breakpoint-up(lg) {
+    $fs: 12px;
+    $lh: 18px;
+    $fw: 300;
+  }
+}

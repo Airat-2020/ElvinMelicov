@@ -1,0 +1,41 @@
+/*
+  стили заголовков
+*/
+
+.h1{
+    &--top {
+        @include main-headline();
+    }
+
+    &--bottom{
+        @include main-headline(
+            $fs: 18px,
+            $fh: 22px
+        );
+
+        @include media-breakpoint-up(lg) {
+            $fs: 36px;
+            $fh: 45px;
+        }
+    }
+}
+
+.h2{
+    &--sm {
+        @include headline-sm();
+    }
+
+    &--md {
+        @include headline-md();
+    }
+}
+
+h3,
+.h3 {
+    @include title();
+}
+
+h4,
+.h4 {
+    @include subheading();
+}

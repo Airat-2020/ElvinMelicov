@@ -1,8 +1,8 @@
-@mixin main-headline {
+@mixin main-headline ($fs: 36px, $fw: 900, $fh: 45px) {
   font-family: $font-family-heading;
-  font-size: 36px;
-  font-weight: 900;
-  line-height: 45px;
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $fh;
 
   @include media-breakpoint-up(lg) {
     font-size: 64px;
@@ -51,10 +51,11 @@
   line-height: 23px;
 }
 
-@mixin text-body ($lh: 1.3, $fw: 400) {
+@mixin text-body ($lh: 24px, $fw: 300, $fs: 14px ,$color: $btc-2) {
   font-family: $font-family-text-body;
-  font-size: 15px;
+  font-size: $fs;
   line-height: $lh;
   font-weight: $fw;
+  color: $color;
 }
 
