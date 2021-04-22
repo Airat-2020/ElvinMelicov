@@ -1,66 +1,60 @@
-@mixin MainHeadline {
-  font-family: Gilroy, Arial, sans-serif;
+@mixin main-headline {
+  font-family: $font-family-heading;
   font-size: 36px;
   font-weight: 900;
   line-height: 45px;
 
   @include media-breakpoint-up(lg) {
-    font-family: Gilroy, Arial, sans-serif;
     font-size: 64px;
-    font-weight: 900;
     line-height: 80px;
   }
 }
 
 
 @mixin headline-md {
-  font-family: Gilroy, Arial, sans-serif;
+  font-family: $font-family-heading;
   font-size: 48px;
   font-weight: 900;
   line-height: 60px;
 
   @include media-breakpoint-up(lg) {
-    font-family: Gilroy, Arial, sans-serif;
     font-size: 32px;
-    font-weight: 900;
     line-height: 40px;
   }
 }
 
 
 @mixin headline-sm {
-  font-family: Gilroy, Arial, sans-serif;
+  font-family: $font-family-heading;
   font-size: 36px;
   font-weight: 900;
   line-height: 45px;
 
   @include media-breakpoint-up(lg) {
-    font-family: Gilroy, Arial, sans-serif;
     font-size: 28px;
-    font-weight: 900;
     line-height: 35px;
   }
 }
 
 
 @mixin title {
-  font-family: Gilroy, Arial, sans-serif;
+  font-family: $font-family-heading;
   font-size: 24px;
   font-weight: 900;
   line-height: 30px;
 }
 
-
 @mixin subheading {
-  font-family: Gilroy, Arial, sans-serif;
+  font-family: $font-family-heading;
   font-size: 18px;
   font-weight: 900;
   line-height: 23px;
 }
 
-
-@mixin text-body {
-  font-family: Roboto Condensed, Arial, sans-serif;
+@mixin text-body ($lh: 1.3, $fw: 400) {
+  font-family: $font-family-text-body;
   font-size: 15px;
+  line-height: $lh;
+  font-weight: $fw;
 }
 
