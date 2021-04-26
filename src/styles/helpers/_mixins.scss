@@ -37,7 +37,7 @@
   line-height: 23px;
 }
 
-@mixin text-body ($lh: 24px, $fw: 400 ,$color: #152c5c) {
+@mixin text-body ($lh: 21px, $fw: 400 ,$color: #152c5c) {
   font-family: $font-family-text-body;
   font-size: 14px;
   line-height: $lh;
