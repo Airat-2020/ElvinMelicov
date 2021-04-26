@@ -2,21 +2,19 @@
   Стили для лейблов
 */
 
-.label--text{
-  @include text-body(
-    $fs: 12px,
-    $lh: 18px,
-    $fw: 400
-  );
+.label-text {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
 
   @include media-breakpoint-up(lg) {
-    $fs: 16px;
-    $lh: 24px;
-    $fw: 400;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
   }
 }
 
-.label--checkbox {
+.label-checkbox {
   @include text-body(
    $fs: 12px,
    $lh: 14px,
@@ -24,7 +22,7 @@
   );
 }
 
-.label--file {
+.label-file {
   @include text-body(
     $fs: 16px,
     $lh: 24px,
@@ -32,8 +30,8 @@
   );
 
   @include media-breakpoint-up(lg) {
-    $fs: 12px;
-    $lh: 18px;
-    $fw: 300;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 300;
   }
 }
