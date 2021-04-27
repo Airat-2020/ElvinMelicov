@@ -1,67 +1,12 @@
 //Montserrat
 @font-face {
   font-style: normal;
-  font-weight: 100;
-  font-family: "Montserrat";
-  src:
-  local('Montserrat'), local('Montserrat-Thin'),
-  url("../../fonts/montserrat/montserrat-thin.woff2")  format("woff2"),
-  url("../../fonts/montserrat/montserrat-thin.woff")  format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-style: normal;
-  font-weight: 200;
-  font-family: "Montserrat";
-  src:
-          local('Montserrat'), local('Montserrat-ExtraLight'),
-          url("../../fonts/montserrat/montserrat-extra-light.woff2")  format("woff2"),
-          url("../../fonts/montserrat/montserrat-extra-light.woff")  format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-style: normal;
-  font-weight: 300;
-  font-family: "Montserrat";
-  src:
-          local('Montserrat'), local('Montserrat-Light'),
-          url("../../fonts/montserrat/montserrat-light.woff2")  format("woff2"),
-          url("../../fonts/montserrat/montserrat-light.woff")  format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-style: normal;
   font-weight: 400;
   font-family: "Montserrat";
   src:
           local('Montserrat'), local('Montserrat-Regular'),
-          url("../../fonts/montserrat/montserrat-regular.woff2")  format("woff2"),
-          url("../../fonts/montserrat/montserrat-regular.woff")  format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-style: normal;
-  font-weight: 500;
-  font-family: "Montserrat";
-  src:
-          local('Montserrat'), local('Montserrat-Medium'),
-          url("../../fonts/montserrat/montserrat-medium.woff2")  format("woff2"),
-          url("../../fonts/montserrat/montserrat-medium.woff")  format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-style: normal;
-  font-weight: 600;
-  font-family: "Montserrat";
-  src:
-          local('Montserrat'), local('Montserrat-SemiBold'),
-          url("../../fonts/montserrat/montserrat-semi-bold.woff2")  format("woff2"),
-          url("../../fonts/montserrat/montserrat-semi-bold.woff")  format("woff");
+          url("../../fonts/montserrat/Montserrat-Regular.woff2")  format("woff2"),
+          url("../../fonts/montserrat/Montserrat-Regular.woff")  format("woff");
   font-display: swap;
 }
 
@@ -71,19 +16,8 @@
   font-family: "Montserrat";
   src:
           local('Montserrat'), local('Montserrat-Bold'),
-          url("../../fonts/montserrat/montserrat-bold.woff2")  format("woff2"),
-          url("../../fonts/montserrat/montserrat-bold.woff")  format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-style: normal;
-  font-weight: 800;
-  font-family: "Montserrat";
-  src:
-          local('Montserrat'), local('Montserrat-ExtraBold'),
-          url("../../fonts/montserrat/montserrat-extra-bold.woff2")  format("woff2"),
-          url("../../fonts/montserrat/montserrat-extra-bold.woff")  format("woff");
+          url("../../fonts/montserrat/Montserrat-Bold.woff2")  format("woff2"),
+          url("../../fonts/montserrat/Montserrat-Bold.woff")  format("woff");
   font-display: swap;
 }
 
@@ -92,8 +26,8 @@
   font-weight: 900;
   font-family: "Montserrat";
   src: local('Montserrat'), local('Montserrat-Black'),
-  url("../../fonts/montserrat/montserrat-black.woff2") format("woff2"),
-  url("../../fonts/montserrat/montserrat-black.woff") format("woff");
+  url("../../fonts/montserrat/Montserrat-Black.woff2") format("woff2"),
+  url("../../fonts/montserrat/Montserrat-Black.woff") format("woff");
   font-display: swap;
 }
 
@@ -104,8 +38,8 @@
   font-family: "Roboto Condensed";
   src:
   local("Roboto Condensed"), local("Roboto Condensed-Light"),
-  url("../../fonts/roboto-condensed/roboto-condensed-light.woff2") format("woff2"),
-  url("../../fonts/roboto-condensed/roboto-condensed-light.woff") format("woff");
+  url("../../fonts/roboto-condensed/RobotoCondensed-Light.woff2") format("woff2"),
+  url("../../fonts/roboto-condensed/RobotoCondensed-Light.woff") format("woff");
   font-display: swap;
 }
 
@@ -115,8 +49,8 @@
   font-family: "Roboto Condensed";
   src:
           local("Roboto Condensed"), local("Roboto Condensed-Regular"),
-          url("../../fonts/roboto-condensed/roboto-condensed-regular.woff2") format("woff2"),
-          url("../../fonts/roboto-condensed/roboto-condensed-regular.woff") format("woff");
+          url("../../fonts/roboto-condensed/RobotoCondensed-Regular.woff2") format("woff2"),
+          url("../../fonts/roboto-condensed/RobotoCondensed-Regular.woff") format("woff");
   font-display: swap;
 }
 
@@ -126,7 +60,7 @@
   font-family: "Roboto Condensed";
   src:
           local("Roboto Condensed"), local("Roboto Condensed-Bold"),
-          url("../../fonts/roboto-condensed/roboto-condensed-bold.woff2") format("woff2"),
-          url("../../fonts/roboto-condensed/roboto-condensed-bold.woff") format("woff");
+          url("../../fonts/roboto-condensed/RobotoCondensed-Bold.woff2") format("woff2"),
+          url("../../fonts/roboto-condensed/RobotoCondensed-Bold.woff") format("woff");
   font-display: swap;
 }
