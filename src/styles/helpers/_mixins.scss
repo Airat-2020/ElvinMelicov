@@ -10,29 +10,15 @@
   }
 }
 
-
-@mixin headline-md {
+@mixin headline {
   font-family: $font-family-heading;
-  font-size: 48px;
-  font-weight: 900;
-  line-height: 60px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 35px;
 
   @include media-breakpoint-up(lg) {
-    font-size: 32px;
-    line-height: 40px;
-  }
-}
-
-
-@mixin headline-sm {
-  font-family: $font-family-heading;
-  font-size: 36px;
-  font-weight: 900;
-  line-height: 45px;
-
-  @include media-breakpoint-up(lg) {
-    font-size: 28px;
-    line-height: 35px;
+    font-size: 36px;
+    line-height: 45px;
   }
 }
 
@@ -51,11 +37,13 @@
   line-height: 23px;
 }
 
-@mixin text-body ($lh: 24px, $fw: 300, $fs: 14px ,$color: $btc-2) {
+@mixin text-body ($lh: 21px, $fw: 400 ,$color: #152c5c) {
   font-family: $font-family-text-body;
-  font-size: $fs;
+  font-size: 14px;
   line-height: $lh;
   font-weight: $fw;
   color: $color;
+
+
 }
 
