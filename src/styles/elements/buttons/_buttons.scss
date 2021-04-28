@@ -1,35 +1,35 @@
 .btn{
-    $ff: $font-family-heading;
-    $fw: 900;
+    font-family: $font-family-heading;
+    font-weight: 900;
 
-    &--sm {
-        $fs: 18px;
-        $lh: 23px;
-        $bgc: $button-appointment;
-        $color: $btc-1;
-        box-shadow: 0 4px 0 $button-shadow-1;
+    &-danger {
+        background-color: $button-danger;
+        color: $light;
+        box-shadow: $button-danger-shadow;
+
+        &--sm{
+            font-size: 18px;
+            line-height: 23px;
+        }
+
+        &--lg{
+            font-size: 20px;
+            line-height: 25px;
+        }
     }
 
-    &--lg{
-        $fs: 20px;
-        $lh: 25px;
-        $bgc: $button-appointment;
-        $color: $btc-1;
-        box-shadow: 0 4px 0 $button-shadow-1;
+    &-success{
+        font-size: 20px;
+        line-height: 25px;
+        color: $light;
+        background-color: $button-success;
+        box-shadow: $button-success-shadow;
     }
 
-    &--ok{
-        $fs: 20px;
-        $lh: 25px;
-        $bgc: $button-ok;
-        $color: $btc-1;
-        box-shadow: 0 4px 0 $button-shadow-2;
-    }
-
-    &--more{
-        $fs: 14px;
-        $lh: 17px;
-        $color: $button-more;
+    &-info{
+        font-size: 14px;
+        line-height: 17px;
+        color: $button-info;
     }
 }
 
