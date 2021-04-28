@@ -6,28 +6,18 @@ $font-family-text-body: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "
 "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
 "Segoe UI Symbol";
 
-//colors
-//
-//basics-text-colors
-$btc-1: #ffffff;
-$btc-2: #152c5c;
+// Переопределение стилей BootStrap
+$primary:       #152c5c;
+$secondary:     #0095e5;
+$light:         #ffffff;
+$decoration:    #ffd7d9;
 
-//basic-background-color
-$bbg-1: #0095e5;
-$bbg-2: #152c5c;
+//палочка под заголовками
+$strip: linear-gradient(90deg, #0095e5 50%, #E30613 50%);
 
-//list-colors
-$list-color-1: #b1ddfd;
-$list-color-2: #ffd7d9;
-
-//button-appointment
-$button-appointment: linear-gradient(180deg, #f0515e 0%, #e30613 100%);
-
-//button-ok
-$button-ok: linear-gradient(180deg, #2ec061 0%, #13a546 100%);
-
-//button-more-details
-$button-more: #0095e5;
-
-//strip-under-headings
-$strip: linear-gradient(90deg, #0095e5 50%, #E30613 50%);;
+// стили для кнопок
+$button-info:           #b1ddfd;
+$button-danger:         linear-gradient(180deg, #f0515e 0%, #e30613 100%);
+$button-danger-shadow:  0px 4px 0px #820E15;
+$button-success:        linear-gradient(180deg, #2ec061 0%, #13a546 100%);
+$button-success-shadow: 0px 4px 0px #136D33;
