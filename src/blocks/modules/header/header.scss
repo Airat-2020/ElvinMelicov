@@ -1,0 +1,98 @@
+.header{
+  background-color: $secondary;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+  .header__container{
+    display: flex;
+    justify-content: space-between;
+    padding: 17px 25px 12px 25px;
+
+    @include media-breakpoint-up(md) {
+      padding: 22px 30px 18px 30px;
+      max-width: 1170px;
+      margin: 0 auto;
+    }
+  }
+
+  .header__logo,
+  .header__contact{
+    display: none;
+
+    @include media-breakpoint-up(md) {
+      display: flex;
+    }
+  }
+
+  .header__open-menu,
+  .header__open-menu::before,
+  .header__open-menu::after{
+    content: "";
+    background-color: $light;
+    display: block;
+    width: 30px;
+    height: 3px;
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+
+  .header__open-menu::before{
+    margin-top: 7px;
+    margin-left: -6px;
+  }
+
+  .header__open-menu::after{
+    margin-top: 5px;
+    margin-left: -6px;
+  }
+
+}
+
+
+.contact{
+  &__subway{
+      margin-right: 50px;
+
+    &::before{
+      background-image: url("../../../img/svg/subway.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      content: "";
+      width: 22px;
+      height: 28px;
+      display: block;
+      position: absolute;
+      transform: translate(-33px, -1px);
+    }
+  }
+
+  &__society{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 65px;
+  }
+
+  &__tel{
+    @include media-breakpoint-up(md) {
+      margin-right: 50px;
+    }
+  }
+}
+
+
+.tel{
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
+
+
+.show{
+  display: block;
+}
+
+.none{
+  display: none;
+}
