@@ -21,14 +21,14 @@
     }
 
     &.btn-danger {
-        background-color: $button-danger;
+        background-color: $danger;
         color: $light;
         box-shadow: $button-danger-shadow;
     }
 
     &.btn-success {
         color: $light;
-        background-color: $button-success;
+        background-color: $success;
         box-shadow: $button-success-shadow;
     }
 }
@@ -38,7 +38,7 @@
     font-weight: 900;
     font-size: 14px;
     line-height: 17px;
-    color: $button-info;
+    color: $info;
     border-radius: 0;
     background-color: transparent;
     display: inline-block;
