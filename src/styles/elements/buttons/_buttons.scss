@@ -1,35 +1,50 @@
-.btn{
+.btn {
     font-family: $font-family-heading;
     font-weight: 900;
+    border-radius: 0;
+    background-color: transparent;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    user-select: none;
+    border: none;
 
-    &--sm {
+    &.btn-sm {
         font-size: 18px;
         line-height: 23px;
-        background-color: $button-appointment;
-        color: $btc-1;
-        box-shadow: 0 4px 0 $button-shadow-1;
     }
 
-    &--lg{
+    &.btn-lg {
         font-size: 20px;
         line-height: 25px;
-        background-color: $button-appointment;
-        color: $btc-1;
-        box-shadow: 0 4px 0 $button-shadow-1;
     }
 
-    &--ok{
-        font-size: 20px;
-        line-height: 25px;
-        background-color: $button-ok;
-        color: $btc-1;
-        box-shadow: 0 4px 0 $button-shadow-2;
+    &.btn-danger {
+        background-color: $danger;
+        color: $light;
+        box-shadow: $button-danger-shadow;
     }
 
-    &--more{
-        font-size: 14px;
-        line-height: 17px;
-        color: $button-more;
+    &.btn-success {
+        color: $light;
+        background-color: $success;
+        box-shadow: $button-success-shadow;
     }
 }
 
+.btn-link {
+    font-family: $font-family-heading;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 17px;
+    color: $info;
+    border-radius: 0;
+    background-color: transparent;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    user-select: none;
+    border: none;
+}
