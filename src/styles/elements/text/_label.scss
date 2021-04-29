@@ -18,7 +18,6 @@
   font-size: 12px;
   line-height: 14px;
   font-weight: 700;
-
 }
 
 .label-file {
@@ -26,6 +25,13 @@
   line-height: 24px;
   font-weight: 300;
 
+  &::before {
+    content: "";
+    margin-right: 11px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
 
   @include media-breakpoint-up(lg) {
     font-size: 12px;

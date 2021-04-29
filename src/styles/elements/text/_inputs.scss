@@ -1,38 +1,40 @@
 .input {
-  &--text{
-    border: none;
-    border-bottom: 1px solid $btc-2;
+  &-text{
     @include text-body();
+    border: none;
+
+    &--dark{
+      border-bottom: 1px solid $primary;
+      color: $primary;
+    }
+
+    &--light{
+      border-bottom: 1px solid $light;
+      color: $light;
+    }
   }
 
-  &--file ~ .label--checkbox::before {
-    content: "";
-    margin-right: 11px;
-    display: block;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-
-  &--checkbox {
+  &-checkbox {
     display: none;
 
-    & ~ .label--checkbox::before {
+    & ~ .label-checkbox::before {
       width: 22px;
       height: 22px;
       content: "";
+      background-color: $primary;
       border-radius: 3px;
       margin-right: 11px;
       display: block;
     }
 
-    &:checked ~ .label--checkbox::before {
+    &:checked ~ .label-checkbox::before {
       width: 22px;
       height: 22px;
       content: "";
+      background-color: $primary;
       border-radius: 3px;
       margin-right: 11px;
       background-image: url("../../../img/svg/icon-tick.svg");
-      background-repeat: no-repeat;
       background-position: center center;
       display: block;
     }
