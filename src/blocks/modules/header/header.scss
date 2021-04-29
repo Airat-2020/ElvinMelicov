@@ -83,16 +83,8 @@
 
 
 .tel{
+  font-weight: 700;
   @include media-breakpoint-up(md) {
     display: none;
   }
-}
-
-
-.show{
-  display: block;
-}
-
-.none{
-  display: none;
 }
