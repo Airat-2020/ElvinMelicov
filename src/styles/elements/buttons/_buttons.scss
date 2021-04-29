@@ -1,35 +1,50 @@
-.btn{
+.btn {
     font-family: $font-family-heading;
     font-weight: 900;
+    border-radius: 0;
+    background-color: transparent;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    user-select: none;
+    border: none;
 
-    &-danger {
+    &.btn-sm {
+        font-size: 18px;
+        line-height: 23px;
+    }
+
+    &.btn-lg {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    &.btn-danger {
         background-color: $button-danger;
         color: $light;
         box-shadow: $button-danger-shadow;
-
-        &--sm{
-            font-size: 18px;
-            line-height: 23px;
-        }
-
-        &--lg{
-            font-size: 20px;
-            line-height: 25px;
-        }
     }
 
-    &-success{
-        font-size: 20px;
-        line-height: 25px;
+    &.btn-success {
         color: $light;
         background-color: $button-success;
         box-shadow: $button-success-shadow;
     }
-
-    &-info{
-        font-size: 14px;
-        line-height: 17px;
-        color: $button-info;
-    }
 }
 
+.btn-link {
+    font-family: $font-family-heading;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 17px;
+    color: $button-info;
+    border-radius: 0;
+    background-color: transparent;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    user-select: none;
+    border: none;
+}
