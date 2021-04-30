@@ -1,0 +1,46 @@
+.promo {
+  background-color: $secondary;
+  background-image: url("../../../img/promo-bg.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+  background-position: 0 0;
+  padding-bottom: 28px;
+
+  &__img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    &::before{
+
+    }
+  }
+
+  &__heading {
+    padding: 25px 20px 13px 25px;
+    color: $light;
+    position: relative;
+  }
+
+  &__about {
+    width: 240px;
+    padding-left: 25px;
+    color: $light;
+  }
+
+
+  &__form {
+    display: none;
+  }
+}
+
+.form {
+
+  &__button {
+    padding: 17px 30px;
+    display: block;
+    margin: 260px auto 28px auto;
+    position: relative;
+  }
+}

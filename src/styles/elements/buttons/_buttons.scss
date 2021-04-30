@@ -10,23 +10,24 @@
     user-select: none;
     border: none;
 
-    &.btn-sm {
+    &-sm {
         font-size: 18px;
         line-height: 23px;
     }
 
-    &.btn-lg {
+    &-lg {
         font-size: 20px;
         line-height: 25px;
     }
 
-    &.btn-danger {
+    &-danger {
         background-color: $danger;
         color: $light;
         box-shadow: $button-danger-shadow;
+        border-radius: 35px;
     }
 
-    &.btn-success {
+    &-success {
         color: $light;
         background-color: $success;
         box-shadow: $button-success-shadow;

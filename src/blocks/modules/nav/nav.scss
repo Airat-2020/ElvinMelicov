@@ -27,7 +27,7 @@
   }
 
   &__item{
-    padding-bottom: 25px;
+    margin-bottom: 25px;
 
     @include media-breakpoint-up(md) {
       margin-right: 57px;
@@ -36,7 +36,7 @@
 
   &-top{
     background-color: $secondary;
-    padding: 21px 22px 0 24px;
+    padding: 20px 20px 0 20px;
     display: flex;
     justify-content: space-between;
 
@@ -54,13 +54,19 @@
       display: none;
     }
 
-    &__society{
-      width: 140px;
-      display: flex;
-      justify-content: space-between;
-      padding-top: 20px;
-      margin: 0 auto;
-    }
+      &__social-list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+        padding-left: 0;
+        text-align: center;
+        margin: -20px;
+      }
+
+      &__item{
+        margin: 20px;
+      }
   }
 }
 
