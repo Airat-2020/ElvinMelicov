@@ -21,7 +21,7 @@
     }
 
     &-danger {
-        background-color: $danger;
+        background: $danger;
         color: $light;
         box-shadow: $button-danger-shadow;
         border-radius: 35px;
@@ -29,7 +29,7 @@
 
     &-success {
         color: $light;
-        background-color: $success;
+        background: $success;
         box-shadow: $button-success-shadow;
     }
 }

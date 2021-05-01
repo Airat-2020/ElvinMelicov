@@ -1,0 +1,98 @@
+.pathology{
+  background-color: $gray-200;
+  padding: 47px 25px 100px 25px;
+
+  @include media-breakpoint-up(lg) {
+    padding: 115px 30px 117px 30px;
+    display: flex;
+  }
+
+  &__heading{
+    color: $primary;
+    margin-bottom: 93px;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 100px;
+    }
+
+    &::after{
+      display: block;
+      content: "";
+      width: 120px;
+      height: 3px;
+      border-radius: 3px;
+      background: $strip;
+      margin-top: 25px;
+    }
+  }
+
+  &__list{
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -20px;
+    }
+  }
+
+  &__item{
+    box-shadow: -5px -5px 25px #ffffff,
+                5px 5px 30px rgba(13, 39, 80, 0.16);
+    border-radius: 12px;
+    padding-bottom: 28px;
+    margin-bottom: 25px;
+
+    @include media-breakpoint-up(lg) {
+      width: 300px;
+      margin: 20px;
+    }
+  }
+
+  &__p{
+    color: $primary;
+    font-weight: 700;
+    margin: 0 13px 23px 13px;
+  }
+
+  &__link{
+    font-family: $font-family-heading;
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 17px;
+    color: $secondary;
+    margin-left: 13px;
+    display: flex;
+    position: relative;
+    align-items: center;
+
+    &::before{
+      width: 25px;
+      height: 2px;
+      content: "";
+      background-color: $secondary;
+      transform: translateX(120px);
+      position: absolute;
+    }
+
+    &::after{
+      width: 0;
+      height: 0;
+      display: inline-block;
+      content: "";
+      border-top: 3px solid transparent;
+      border-bottom: 3px solid transparent;
+      border-left: 5px solid $secondary;
+      position: absolute;
+      transform: translateX(145px);
+    }
+  }
+
+  &__button{
+    padding: 15px 30px 11px 30px;
+    margin-top: 60px;
+
+    @include media-breakpoint-up(lg) {
+      margin: 80px auto 0 auto;
+      display: block;
+    }
+  }
+}
