@@ -4,7 +4,7 @@
   @include media-breakpoint-up(md) {
     display: block;
     max-width: 1170px;
-    margin: 0 auto;
+    margin: 0 auto auto;
   }
 
   &__list{

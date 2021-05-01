@@ -1,9 +1,15 @@
+input{
+  border: none;
+  background-color: transparent;
+}
+
 .input-text {
   @include text-body();
   border: none;
   border-bottom: 1px solid $primary;
   color: $primary;
   border-radius: 0;
+  display: block;
 
   &--light {
     border-bottom: 1px solid $light;
@@ -17,12 +23,35 @@
   &__label {
     display: flex;
     align-items: center;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 700;
 
     &::before {
       content: "";
       width: 22px;
       height: 22px;
       background-color: $primary;
+      border-radius: 3px;
+      margin-right: 11px;
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+
+  &__label--light {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 700;
+
+    &::before {
+      content: "";
+      width: 22px;
+      height: 22px;
+      background-color: $light;
       border-radius: 3px;
       margin-right: 11px;
       display: inline-block;
@@ -40,6 +69,20 @@
 
     &:checked ~ .checkbox__label::before {
       background-image: url("../../../img/svg/icon-tick.svg");
+      background-position: center;
+    }
+  }
+
+  &__input--light {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    opacity: 0;
+    pointer-events: none;
+
+    &:checked ~ .checkbox__label--light::before {
+      background-image: url("../../../img/svg/icon-tick-blue.svg");
+      background-position: center;
     }
   }
 }
