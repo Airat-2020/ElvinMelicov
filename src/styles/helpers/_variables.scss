@@ -9,9 +9,9 @@ $font-family-text-body: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "
 // Переопределение стилей BootStrap
 $primary:       #152c5c;
 $secondary:     #048ad9;
-$success:       linear-gradient(180deg, #2EC061 0%, #13A546 100%);
+$success:       #13A546;
 $info:          #b1ddfd;
-$danger:        linear-gradient(180deg, #F0515E 0%, #E30613 100%);
+$danger:        #E30613;
 $light:         #ffffff;
 $decoration:    #ffd7d9;
 
@@ -29,3 +29,4 @@ $button-danger-shadow:  0px 4px 0px #820E15;
 $button-success-shadow: 0px 4px 0px #136D33;
 
 $strip: linear-gradient(90deg, #0095e5 50%, #E30613 50%);
+$strip-light: linear-gradient(90deg, #ffffff 50%, #E30613 50%);

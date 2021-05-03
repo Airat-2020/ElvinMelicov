@@ -1,0 +1,88 @@
+.about{
+  background-color: $secondary;
+  padding: 49px 25px 66px 25px;
+
+  &__heading{
+    color: $light;
+    text-align: center;
+    margin-bottom: 100px;
+
+    &::after{
+      display: block;
+      margin: 15px auto 0 auto;
+      content: "";
+      width: 120px;
+      height: 3px;
+      border-radius: 3px;
+      background: $strip-light;
+    }
+  }
+
+  &__img-wrapper{
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  &__bg{
+    position: absolute;
+    z-index: 1;
+    left: 5px;
+    bottom: 5px;
+  }
+
+  &__circle{
+    position: absolute;
+    z-index: 2;
+    left: -25px;
+    top: -220px;
+  }
+
+  &__logo{
+    position: absolute;
+    left: 40px;
+    top: 10px;
+    z-index: 3;
+  }
+
+  &__doctor{
+    position: relative;
+    z-index: 4;
+    bottom: 0;
+    right: 30px;
+  }
+
+  &__title{
+    color: $light;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 35px;
+  }
+
+  &__p{
+    color: $light;
+  }
+
+  &__list{
+    margin: -25px;
+  }
+
+  &__item{
+    font-family: $font-family-text-body;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    color: $light;
+    margin: 25px;
+
+    &::before{
+      background-image: url("../../../img/svg/item-tick.svg");
+      background-repeat: no-repeat;
+      content: "";
+      display: block;
+      position: absolute;
+      width: 25px;
+      height: 16px;
+      transform: translateX(-40px);
+    }
+  }
+}
