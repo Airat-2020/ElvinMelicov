@@ -1,17 +1,5 @@
 # gulp-scss-starter
 
-![GitHub release](https://img.shields.io/github/release/andreyalexeich/gulp-scss-starter.svg)
-[![dependencies Status](https://david-dm.org/andreyalexeich/gulp-scss-starter/status.svg)](https://david-dm.org/andreyalexeich/gulp-scss-starter)
-[![devDependencies Status](https://david-dm.org/andreyalexeich/gulp-scss-starter/dev-status.svg)](https://david-dm.org/andreyalexeich/gulp-scss-starter?type=dev)
-![GitHub stars](https://img.shields.io/github/stars/andreyalexeich/gulp-scss-starter.svg?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/andreyalexeich/gulp-scss-starter.svg?style=social)
-<a href="https://www.paypal.me/andreyalexeich/">
-<img src="https://img.shields.io/badge/%D0%97%D0%B0%D0%B4%D0%BE%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BD%D0%B0%20%D0%BF%D0%B8%D0%B2%D0%BE-PayPal-informational.svg">
-</a>
-<a href="https://www.tinkoff.ru/cardtocard/">
-<img src="https://img.shields.io/badge/%D0%97%D0%B0%D0%B4%D0%BE%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BD%D0%B0%20%D0%BF%D0%B8%D0%B2%D0%BE-%D0%9D%D0%B0%20%D0%BA%D0%B0%D1%80%D1%82%D1%83%20--%205536%209137%205288%201934-informational.svg">
-</a>
-
 ## :fire: Особенности
 * именование классов по [БЭМ](https://ru.bem.info/)
 * используется БЭМ-структура
@@ -162,18 +150,3 @@ entry: {
 ```
 * подключить скомпилированные js-файлы на необходимых страницах
 
-## :hash: CSS-сетка smart-grid
-В сборщик включена CSS-сетка [smart-grid](https://github.com/dmitry-lavrik/smart-grid) от [Дмитрия Лаврика](https://dmitrylavrik.ru/). Она позволяет избавиться от
-лишних классов в разметке за счёт использования примесей в SCSS и ускоряет адаптивную вёрстку. Конфигурация уже настроена в соответствии с сеткой [Bootstrap](https://getbootstrap.com/). Инструкция по использованию [здесь](https://grid4web.ru/basics).
-
-## :point_right: Нужен SCSS + Pug?
-Используйте [эту](https://github.com/andreyalexeich/gulp-pug-starter/) сборку.
-
-## :yellow_heart: Нравится проект?
-Сообщайте мне о [багах](https://github.com/andreyalexeich/gulp-scss-starter/issues), ставьте звёздочку в правом верхнем углу, задонатьте мне на пиво :beer:
-* [На PayPal](https://www.paypal.me/andreyalexeich)
-* [На карту - 5536 9137 5288 1934](https://www.tinkoff.ru/cardtocard/)
-
-## :envelope: Контакты
-* ВКонтакте: [@andreyalexeich](https://vk.com/andreyalexeich)
-* Telegram: [@andreyalexeich](https://t-do.ru/andreyalexeich)
