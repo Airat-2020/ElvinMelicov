@@ -1,0 +1,25 @@
+stages:
+  - verify
+  - pages
+
+.install-deps:
+  variables:
+    PUPPETEER_SKIP_DOWNLOAD: 'true'
+  before_script:
+    - npm ci --quiet
+  after_script:
+    - rm -rf node_modules
+
+deploy_pages:
+  stage: pages
+  cache:
+    paths:
+      - node_modules/
+  script:
+    - npm ci
+    - npm run build
+  artifacts:
+    paths:
+      - public
+  only:
+    - preproduction
