@@ -9,7 +9,6 @@ deploy_pages:
     paths:
       - node_modules/
   script:
-    - npm ci
     - npm run build
   artifacts:
     paths:
