@@ -150,18 +150,3 @@ entry: {
 ```
 * подключить скомпилированные js-файлы на необходимых страницах
 
-## :hash: CSS-сетка smart-grid
-В сборщик включена CSS-сетка [smart-grid](https://github.com/dmitry-lavrik/smart-grid) от [Дмитрия Лаврика](https://dmitrylavrik.ru/). Она позволяет избавиться от
-лишних классов в разметке за счёт использования примесей в SCSS и ускоряет адаптивную вёрстку. Конфигурация уже настроена в соответствии с сеткой [Bootstrap](https://getbootstrap.com/). Инструкция по использованию [здесь](https://grid4web.ru/basics).
-
-## :point_right: Нужен SCSS + Pug?
-Используйте [эту](https://github.com/andreyalexeich/gulp-pug-starter/) сборку.
-
-## :yellow_heart: Нравится проект?
-Сообщайте мне о [багах](https://github.com/andreyalexeich/gulp-scss-starter/issues), ставьте звёздочку в правом верхнем углу, задонатьте мне на пиво :beer:
-* [На PayPal](https://www.paypal.me/andreyalexeich)
-* [На карту - 5536 9137 5288 1934](https://www.tinkoff.ru/cardtocard/)
-
-## :envelope: Контакты
-* ВКонтакте: [@andreyalexeich](https://vk.com/andreyalexeich)
-* Telegram: [@andreyalexeich](https://t-do.ru/andreyalexeich)
