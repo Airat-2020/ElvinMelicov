@@ -2,14 +2,6 @@ stages:
   - verify
   - pages
 
-.install-deps:
-  variables:
-    PUPPETEER_SKIP_DOWNLOAD: 'true'
-  before_script:
-    - npm ci --quiet
-  after_script:
-    - rm -rf node_modules
-
 deploy_pages:
   stage: pages
   cache:
@@ -20,6 +12,6 @@ deploy_pages:
     - npm run build
   artifacts:
     paths:
-      - public
+      - dist
   only:
     - preproduction
