@@ -4078,6 +4078,11 @@ electron-to-chromium@^1.3.712:
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.717.tgz#78d4c857070755fb58ab64bcc173db1d51cbc25f"
   integrity sha512-OfzVPIqD1MkJ7fX+yTl2nKyOE4FReeVfMCzzxQS+Kp43hZYwHwThlGP+EGIZRXJsxCM7dqo8Y65NOX/HP12iXQ==
 
+element-closest-polyfill@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/element-closest-polyfill/-/element-closest-polyfill-1.0.2.tgz#272c217d60effe76a0509a911cde5fcdd78da5a6"
+  integrity sha512-+3cNhtv8YIyk/oDSlBv+zqUjQFcF9puLp4TFIk2w0Gqd6IL2uZnnu0jvDdOaI7dsK1bIA9gG69KIvkEyUFVGRg==
+
 elliptic@^6.5.3:
   version "6.5.4"
   resolved "https://registry.yarnpkg.com/elliptic/-/elliptic-6.5.4.tgz#da37cebd31e79a1367e941b592ed1fbebd58abbb"
@@ -6153,6 +6158,13 @@ husky@^4.2.1:
     please-upgrade-node "^3.2.0"
     slash "^3.0.0"
     which-pm-runs "^1.0.0"
+
+hystmodal@^0.4.4:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/hystmodal/-/hystmodal-0.4.4.tgz#9543c9a572fe91c95b7f6472d85cbdc5ff624caf"
+  integrity sha512-RxYz9LxvsxjaIL2XPwOMywqzPmjDj2ptk3ixq/YQ6gHr3kwvQlgpm3a1y0kvwlyw5alYT+3m8M6KUvgZ1Vu7Fg==
+  dependencies:
+    element-closest-polyfill "^1.0.2"
 
 iconv-lite@0.4.24:
   version "0.4.24"
