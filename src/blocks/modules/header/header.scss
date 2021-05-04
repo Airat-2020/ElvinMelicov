@@ -1,0 +1,73 @@
+.header{
+  background-color: $secondary;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+  .header__inner{
+    display: flex;
+    justify-content: space-between;
+    padding: 17px 25px 12px 25px;
+
+    @include media-breakpoint-up(md) {
+      padding: 22px 30px 18px 30px;
+    }
+  }
+
+  .header__logo,
+  .header__contact{
+    display: none;
+
+    @include media-breakpoint-up(md) {
+      display: flex;
+    }
+  }
+
+  .header__open-menu {
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      width: 30px;
+      background-color: white;
+      box-shadow: 0 -8px white, 0 8px white;
+      height: 3px;
+    }
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+}
+
+.contact{
+  &__subway {
+    margin-right: 50px;
+  }
+
+  &__subway-icon{
+    margin-right: 5px;
+  }
+
+  &__tel{
+    @include media-breakpoint-up(md) {
+      margin-right: 50px;
+    }
+  }
+}
+
+
+.tel{
+  font-weight: 700;
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
+
+.social{
+  list-style: none;
+  display: flex;
+  margin: -10px;
+
+  &__item{
+    margin: 10px;
+  }
+}

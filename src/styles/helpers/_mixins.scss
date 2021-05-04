@@ -4,7 +4,8 @@
   font-weight: $fw;
   line-height: $fh;
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(md) {
+    margin: 0;
     font-size: 64px;
     line-height: 80px;
   }
@@ -16,9 +17,10 @@
   font-size: 28px;
   line-height: 35px;
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(md) {
     font-size: 36px;
     line-height: 45px;
+    margin: 0;
   }
 }
 
