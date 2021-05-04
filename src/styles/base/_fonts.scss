@@ -1,0 +1,67 @@
+//Montserrat
+@font-face {
+    font-style: normal;
+    font-weight: 400;
+    font-family: "Montserrat";
+    src: local("Montserrat"),
+        local("Montserrat-Regular"),
+        url("../../fonts/montserrat/Montserrat-Regular.woff2") format("woff2"),
+        url("../../fonts/montserrat/Montserrat-Regular.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-style: normal;
+    font-weight: 700;
+    font-family: "Montserrat";
+    src: local("Montserrat"),
+        local("Montserrat-Bold"),
+        url("../../fonts/montserrat/Montserrat-Bold.woff2") format("woff2"),
+        url("../../fonts/montserrat/Montserrat-Bold.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-style: normal;
+    font-weight: 900;
+    font-family: "Montserrat";
+    src: local("Montserrat"),
+        local("Montserrat-Black"),
+        url("../../fonts/montserrat/Montserrat-Black.woff2") format("woff2"),
+        url("../../fonts/montserrat/Montserrat-Black.woff") format("woff");
+    font-display: swap;
+}
+
+//Roboto Condensed
+@font-face {
+    font-style: normal;
+    font-weight: 300;
+    font-family: "Roboto Condensed";
+    src: local("Roboto Condensed"),
+        local("Roboto Condensed-Light"),
+        url("../../fonts/roboto-condensed/RobotoCondensed-Light.woff2") format("woff2"),
+        url("../../fonts/roboto-condensed/RobotoCondensed-Light.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-style: normal;
+    font-weight: 400;
+    font-family: "Roboto Condensed";
+    src: local("Roboto Condensed"),
+        local("Roboto Condensed-Regular"),
+        url("../../fonts/roboto-condensed/RobotoCondensed-Regular.woff2") format("woff2"),
+        url("../../fonts/roboto-condensed/RobotoCondensed-Regular.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-style: normal;
+    font-weight: 700;
+    font-family: "Roboto Condensed";
+    src: local("Roboto Condensed"),
+        local("Roboto Condensed-Bold"),
+        url("../../fonts/roboto-condensed/RobotoCondensed-Bold.woff2") format("woff2"),
+        url("../../fonts/roboto-condensed/RobotoCondensed-Bold.woff") format("woff");
+    font-display: swap;
+}

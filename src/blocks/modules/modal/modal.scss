@@ -1,0 +1,112 @@
+.hystmodal__opened {
+    position: fixed;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+}
+.hystmodal__shadow {
+    display: block;
+    position: fixed;
+    z-index: 98;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    border: none;
+    transition: opacity 0.15s ease;
+    pointer-events: none;
+    opacity: 0;
+    background-color: $black;
+}
+.hystmodal__shadow--show {
+    pointer-events: auto;
+    opacity: 0.6;
+}
+.hystmodal {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    opacity: 1;
+    pointer-events: none;
+    visibility: hidden;
+}
+.hystmodal--active {
+    opacity: 1;
+}
+.hystmodal--moved, .hystmodal--active {
+    pointer-events: auto;
+    visibility: visible;
+}
+.hystmodal__wrap {
+    display: flex;
+    flex-flow: column nowrap;
+    flex-grow: 0;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    margin: auto;
+}
+.hystmodal__window {
+    box-sizing: border-box;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 600px;
+    max-width: 100%;
+    overflow: visible;
+    margin: 50px 0;
+    transform: scale(0.9);
+    transition: transform 0.2s ease 0s, opacity 0.2s ease 0s;
+    background: #fff;
+    opacity: 0;
+}
+.hystmodal--active .hystmodal__window {
+    transform: scale(1);
+    opacity: 1;
+}
+.hystmodal__close {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: -40px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' stroke='%23fff' stroke-linecap='square' stroke-miterlimit='50' stroke-width='2' d='M22 2L2 22'/%3E%3Cpath fill='none' stroke='%23fff' stroke-linecap='square' stroke-miterlimit='50' stroke-width='2' d='M2 2l20 20'/%3E%3C/svg%3E");
+    background-size: 100% 100%;
+    font-size: 0;
+    cursor: pointer;
+    outline: none;
+}
+.hystmodal__close:focus {
+    outline: 2px dotted #afb3b9;
+    outline-offset: 2px;
+}
+@media all and (max-width:767px) {
+    .hystmodal__close {
+        top: 10px;
+        right: 10px;
+        width: 24px;
+        height: 24px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' stroke='%23111' stroke-linecap='square' stroke-miterlimit='50' stroke-width='2' d='M22 2L2 22'/%3E%3Cpath fill='none' stroke='%23111' stroke-linecap='square' stroke-miterlimit='50' stroke-width='2' d='M2 2l20 20'/%3E%3C/svg%3E");
+    }
+    .hystmodal__window {
+        margin: 0;
+    }
+}

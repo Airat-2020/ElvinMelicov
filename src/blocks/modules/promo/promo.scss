@@ -1,0 +1,126 @@
+.promo {
+    background-color: $secondary;
+    background-image: url("../../../img/promo-bg-mobile.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    background-position: 0 0;
+    padding-bottom: 28px;
+
+    &__doctor {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        @include media-breakpoint-up(lg) {
+            z-index: 2;
+            right: 10%;
+        }
+    }
+
+    &__melicov {
+        position: absolute;
+        bottom: 30px;
+        left: 15px;
+
+        @include media-breakpoint-up(lg) {
+            z-index: 3;
+            left: 60%;
+        }
+    }
+
+    &__dr {
+        position: absolute;
+        bottom: 105px;
+        left: 50px;
+
+        @include media-breakpoint-up(lg) {
+            z-index: 1;
+            left: 45%;
+        }
+    }
+
+    &__heading-inner {
+        @include media-breakpoint-up(lg) {
+            display: flex;
+            justify-content: left;
+        }
+    }
+
+    &__heading {
+        position: relative;
+        padding: 25px 20px 13px 25px;
+        color: $light;
+
+        @include media-breakpoint-up(lg) {
+            padding: 0;
+            text-align: right;
+            margin-bottom: 0;
+            margin-left: 3%;
+        }
+    }
+
+    &__about {
+        width: 240px;
+        padding-left: 25px;
+        color: $light;
+
+        @include media-breakpoint-up(lg) {
+            text-align: right;
+            padding: 0;
+            margin-top: 35px;
+            margin-left: 20%;
+        }
+    }
+
+
+    &__form {
+        display: none;
+
+        @include media-breakpoint-up(lg) {
+            display: block;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        background-image: url("../../../img/promo-bg-desktop.png");
+        padding-top: 90px;
+        padding-bottom: 65px;
+    }
+}
+
+/* stylelint-disable plugin/selector-bem-pattern */
+.form {
+    margin-top: 70px;
+    margin-left: 30px;
+
+    &__span {
+        font-family: $font-family-heading;
+        display: block;
+        margin-bottom: 40px;
+        font-size: 24px;
+        font-weight: 900;
+        line-height: 30px;
+        color: $light;
+    }
+
+    &__button {
+        display: block;
+        position: relative;
+        margin: 45px 0 0 0;
+        padding: 17px 30px;
+    }
+
+    &__input {
+        margin-bottom: 35px;
+    }
+
+    &__link {
+        font-family: $font-family-text-body;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+        margin-left: 5px;
+        border-bottom: 1px solid $light;
+    }
+}

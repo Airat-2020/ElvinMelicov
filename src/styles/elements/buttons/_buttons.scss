@@ -1,0 +1,53 @@
+/* stylelint-disable plugin/selector-bem-pattern */
+
+.btn {
+    font-family: $font-family-heading;
+    font-weight: 900;
+    border-radius: 0;
+    background-color: transparent;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    user-select: none;
+    border: none;
+
+    &-sm {
+        font-size: 18px;
+        line-height: 23px;
+    }
+
+    &-lg {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    &-danger {
+        background-color: $danger;
+        color: $light;
+        box-shadow: $button-danger-shadow;
+        border-radius: 35px;
+    }
+
+    &-success {
+        color: $light;
+        background-color: $success;
+        box-shadow: $button-success-shadow;
+    }
+}
+
+.btn-link {
+    font-family: $font-family-heading;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 17px;
+    color: $info;
+    border-radius: 0;
+    background-color: transparent;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    user-select: none;
+    border: none;
+}

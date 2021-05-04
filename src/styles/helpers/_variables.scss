@@ -1,0 +1,31 @@
+$font-family-heading: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+
+$font-family-text-body: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+
+// Переопределение стилей BootStrap
+$primary:       #152c5c;
+$secondary:     #048ad9;
+$success:       #13a546;
+$info:          #b1ddfd;
+$danger:        #e30613;
+$light:         #ffffff;
+$decoration:    #ffd7d9;
+
+$gray-100: #f8f9fa;
+$gray-200: #efefef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+
+$button-danger-shadow:  0 4px 0 #820e15;
+$button-success-shadow: 0 4px 0 #136d33;
+
+$strip: linear-gradient(90deg, #0095e5 50%, #e30613 50%);
