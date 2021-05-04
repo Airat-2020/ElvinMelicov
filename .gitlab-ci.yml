@@ -1,6 +1,7 @@
-stages:
-  - verify
-  - pages
+image: node
+
+before_script:
+  - npm install
 
 deploy_pages:
   stage: pages
