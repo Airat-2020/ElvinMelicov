@@ -4,7 +4,7 @@ before_script:
   - npm install
 
 deploy_pages:
-  stage: pages
+  stage: deploy
   cache:
     paths:
       - node_modules/
