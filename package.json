@@ -71,7 +71,8 @@
         "yargs": "^15.4.1"
     },
     "dependencies": {
-        "bootstrap": "^4.6.0"
+        "bootstrap": "^4.6.0",
+        "hystmodal": "^0.4.4"
     },
     "husky": {
         "hooks": {
