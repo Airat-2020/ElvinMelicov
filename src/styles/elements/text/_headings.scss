@@ -2,22 +2,18 @@
   стили заголовков
 */
 
-h1,
-.h1 {
+h1, .h1 {
     @include main-headline();
 }
 
-h2,
-.h2{
+h2, .h2 {
     @include headline();
 }
 
-h3,
-.h3 {
+h3, .h3 {
     @include title();
 }
 
-h4,
-.h4 {
+h4, .h4 {
     @include subheading();
 }
