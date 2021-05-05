@@ -1,3 +1,5 @@
+/* stylelint-disable plugin/selector-bem-pattern */
+
 .btn {
     font-family: $font-family-heading;
     font-weight: 900;
@@ -21,7 +23,7 @@
     }
 
     &-danger {
-        background: linear-gradient(180deg, #F0515E 0%, #E30613 100%);
+        background: linear-gradient(180deg, #f0515e 0%, #e30613 100%);
         color: $light;
         box-shadow: $button-danger-shadow;
         border-radius: 35px;
@@ -29,7 +31,7 @@
 
     &-success {
         color: $light;
-        background: linear-gradient(180deg, #2EC061 0%, #13A546 100%);
+        background: linear-gradient(180deg, #2ec061 0%, #13a546 100%);
         box-shadow: $button-success-shadow;
     }
 }

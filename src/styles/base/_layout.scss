@@ -1,0 +1,14 @@
+/* stylelint-disable plugin/selector-bem-pattern */
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}

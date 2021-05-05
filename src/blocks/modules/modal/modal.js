@@ -1,6 +1,7 @@
 import HystModal from 'hystmodal';
 
-const myModal = new HystModal({
+// eslint-disable-next-line no-unused-vars
+const modal = new HystModal({
   linkAttributeName: "data-hystmodal",
   //settings (optional). see Configuration
 });
