@@ -1,16 +1,14 @@
 image: node:14.15.5
 
-yarn:install:
-  stage: build
-  script:
-    # Install via yarn with frozen-lockfile to allow reproducible dependencies and check-files option to check if the node_modules cache is valid.
-    - yarn install --frozen-lockfile --check-files --non-interactive
+before_script:
+  - npm install
+
+cache:
+  paths:
+    - node_modules/
 
 pages:
   stage: deploy
-  cache:
-    paths:
-      - node_modules/
   script:
     - npm run build
     - mv dist public
