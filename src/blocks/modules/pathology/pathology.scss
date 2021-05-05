@@ -42,12 +42,12 @@
     margin-bottom: 25px;
 
     @include media-breakpoint-up(lg) {
-      width: 300px;
+      width: 230px;
       margin: 20px;
     }
   }
 
-  &__p{
+  &__subheading{
     color: $primary;
     font-weight: 700;
     margin: 0 13px 23px 13px;

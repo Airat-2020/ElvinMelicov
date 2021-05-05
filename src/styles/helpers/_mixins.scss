@@ -34,9 +34,9 @@
 
 @mixin subheading {
   font-family: $font-family-heading;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 900;
-  line-height: 23px;
+  line-height: 24px;
 }
 
 @mixin text-body ($lh: 21px, $fw: 400 ,$color: #152c5c) {

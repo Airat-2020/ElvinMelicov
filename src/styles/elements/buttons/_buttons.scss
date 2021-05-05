@@ -21,7 +21,7 @@
     }
 
     &-danger {
-        background: $danger;
+        background: linear-gradient(180deg, #F0515E 0%, #E30613 100%);
         color: $light;
         box-shadow: $button-danger-shadow;
         border-radius: 35px;
@@ -29,7 +29,7 @@
 
     &-success {
         color: $light;
-        background: $success;
+        background: linear-gradient(180deg, #2EC061 0%, #13A546 100%);
         box-shadow: $button-success-shadow;
     }
 }
