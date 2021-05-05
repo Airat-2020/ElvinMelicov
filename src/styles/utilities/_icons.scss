@@ -1,0 +1,10 @@
+/*
+  Размеры иконок
+*/
+
+@each $size, $value in $icon-sizes {
+  .icon-#{$size} {
+    width: $value !important;
+    height: $value !important;
+  }
+}
