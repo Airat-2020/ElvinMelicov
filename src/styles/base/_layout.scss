@@ -12,3 +12,13 @@
 a {
     text-decoration: none;
 }
+
+.heading-separator {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 3px;
+    border-radius: 3px;
+    background: $strip;
+    margin: 25px 0 100px 0;
+}
