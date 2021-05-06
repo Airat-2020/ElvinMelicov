@@ -54,6 +54,16 @@
         }
     }
 
+    &__close {
+        padding: 0;
+
+        .icon {
+            fill: $light;
+            width: 30px;
+            height: 30px;
+        }
+    }
+
     &__logo, .contact__subway, .contact__tel, .social__link {
         transition: opacity 0.15s ease-out;
 
