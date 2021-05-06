@@ -4,9 +4,6 @@
 
     &__heading {
         color: $primary;
-
-        @include media-breakpoint-up(lg) {
-        }
     }
 
     &__list {
