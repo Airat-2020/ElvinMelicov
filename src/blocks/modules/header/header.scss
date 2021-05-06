@@ -25,6 +25,12 @@
         }
     }
 
+    &__logo-icon {
+        width: 170px;
+        height: 15px;
+        fill: $light;
+    }
+
     &__open-menu {
         position: relative;
         @include media-breakpoint-up(md) {
@@ -44,10 +50,10 @@
 .contact {
     &__subway {
         margin-right: 50px;
-    }
 
-    &__subway-icon {
-        margin-right: 5px;
+        .icon {
+            margin-right: 5px;
+        }
     }
 
     &__tel {

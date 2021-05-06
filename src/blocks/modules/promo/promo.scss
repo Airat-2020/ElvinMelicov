@@ -93,10 +93,6 @@
             display: block;
         }
     }
-    @include media-breakpoint-up(lg) {
-        z-index: 4;
-        left: 60%;
-    }
 
     @include media-breakpoint-up(lg) {
         background-image: url("../../../img/promo-bg-desktop.png");

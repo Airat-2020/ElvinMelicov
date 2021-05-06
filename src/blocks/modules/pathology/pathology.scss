@@ -4,24 +4,14 @@
 
     &__heading {
         color: $primary;
-        margin-bottom: 93px;
 
         @include media-breakpoint-up(lg) {
-            margin-bottom: 100px;
-        }
-
-        &::after {
-            content: "";
-            display: block;
-            width: 120px;
-            height: 3px;
-            border-radius: 3px;
-            background: $strip;
-            margin-top: 25px;
         }
     }
 
     &__list {
+        list-style: none;
+
         @include media-breakpoint-up(lg) {
             display: flex;
             flex-wrap: wrap;

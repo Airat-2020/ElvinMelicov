@@ -5,16 +5,16 @@
 // Генерируем классы с цветами, например `color-danger` имеет цвет $danger
 
 @each $color, $value in $theme-colors {
-  .color-#{$color} {
-    color: $value !important;
-  }
-  .bg-#{$color} {
-    background-color: $value !important;
-  }
-  .border-#{$color} {
-    border-color: $value !important;
-  }
-  .icon-#{$color} {
-    fill: $value !important;
-  }
+    .color-#{$color} {
+        color: $value !important;
+    }
+    .bg-#{$color} {
+        background-color: $value !important;
+    }
+    .border-#{$color} {
+        border-color: $value !important;
+    }
+    .icon-#{$color} {
+        fill: $value !important;
+    }
 }
