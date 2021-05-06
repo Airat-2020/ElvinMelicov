@@ -19,6 +19,6 @@ a {
     width: 120px;
     height: 3px;
     border-radius: 3px;
-    background: $strip;
-    margin: 25px 0 100px 0;
+    background-image: $strip;
+    border: none;
 }

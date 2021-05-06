@@ -6,6 +6,12 @@
         color: $primary;
     }
 
+    &__separator {
+        @include media-breakpoint-up(lg) {
+            margin: 25px 0 100px 0;
+        }
+    }
+
     &__list {
         list-style: none;
 
