@@ -9,6 +9,7 @@
     background-position: 0 0;
     padding-top: 25px;
     padding-bottom: 25px;
+    overflow: hidden;
 
     &__shadow {
         display: none;
@@ -25,82 +26,119 @@
     &__dr {
         position: absolute;
         bottom: 105px;
-        left: 50px;
+        left: 35px;
 
         @include media-breakpoint-up(lg) {
             z-index: 2;
-            left: 45%;
+            left: 50%;
+            width: 730px;
+            height: 395px;
         }
     }
 
     &__doctor {
         position: absolute;
-        right: 0;
+        right: -100px;
         bottom: 0;
+        width: 370px;
+        height: 405px;
 
         @include media-breakpoint-up(lg) {
             z-index: 3;
             right: 10%;
+            width: 650px;
+            height: 715px;
         }
     }
 
-    &__melicov {
+    &__melikov {
         position: absolute;
-        bottom: 30px;
-        left: 15px;
+        z-index: 4;
+        bottom: 70px;
+        left: 55%;
+        width: 450px;
+        height: 45px;
 
-        @include media-breakpoint-up(lg) {
-            z-index: 3;
-            left: 60%;
+
+        @include media-breakpoint-down(sm) {
+            bottom: 110px;
+            left: -70px;
+            width: 180px;
+            height: 20px;
+            transform: rotate(90deg);
         }
     }
 
-    &__heading-inner {
+    &__info {
         @include media-breakpoint-up(lg) {
             display: flex;
-            justify-content: left;
+            flex-direction: column;
+            align-items: flex-end;
+            width: 500px;
+            margin-left: 0;
+            text-align: right;
         }
     }
 
     &__heading {
         position: relative;
-        padding: 25px 20px 13px 25px;
+        margin: 0 10px 15px 10px;
         color: $light;
 
+        .h2--sm {
+            font-family: $font-family-heading;
+            font-weight: 900;
+            font-size: 18px;
+            line-height: 18px;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 36px;
+                line-height: 40px;
+                margin: 0;
+            }
+        }
+
         @include media-breakpoint-up(lg) {
-            padding: 0;
-            text-align: right;
-            margin-bottom: 0;
-            margin-left: 3%;
+            margin: 0 0 35px 0;
         }
     }
 
     &__about {
         width: 240px;
-        padding-left: 25px;
+        margin: 0 0 340px 0;
+        padding-left: 15px;
         color: $light;
 
         @include media-breakpoint-up(lg) {
+            margin: 0;
             padding: 0;
-            text-align: right;
-            margin-top: 35px;
-            margin-left: 20%;
         }
     }
-
 
     &__form {
         display: none;
 
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up(md) {
             display: block;
         }
     }
 
+    &__button {
+        display: block;
+        position: relative;
+        z-index: 5;
+        margin: 0 auto;
+        padding: 15px 30px;
+
+        @include media-breakpoint-up(lg) {
+            display: none;
+        }
+    }
+
     @include media-breakpoint-up(lg) {
+        height: auto;
+        padding: 60px 0;
         background-image: url("../../../img/promo-bg-desktop.png");
-        padding-top: 90px;
-        padding-bottom: 65px;
     }
 }
 
@@ -108,6 +146,7 @@
 .form {
     margin-top: 70px;
     margin-left: 30px;
+    position: relative;
 
     &__span {
         font-family: $font-family-heading;
@@ -119,11 +158,13 @@
         color: $light;
     }
 
-    &__button {
+    &__submit {
         display: block;
         position: relative;
+        z-index: 5;
+        width: 210px;
         margin: 45px 0 0 0;
-        padding: 17px 30px;
+        padding: 15px 30px;
     }
 
     &__input {

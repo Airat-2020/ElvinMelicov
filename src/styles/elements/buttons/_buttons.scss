@@ -12,18 +12,18 @@
     user-select: none;
     border: none;
 
-    &-sm {
+    &--sm {
         font-size: 18px;
         line-height: 23px;
     }
 
-    &-lg {
+    &--lg {
         font-size: 20px;
         line-height: 25px;
     }
 
     &-danger {
-        background: linear-gradient(180deg, #f0515e 0%, #e30613 100%);
+        background: linear-gradient(180deg, #f0515e 30%, #e30613 70%);
         color: $light;
         box-shadow: $button-danger-shadow;
         border-radius: 35px;
@@ -31,7 +31,7 @@
 
     &-success {
         color: $light;
-        background: linear-gradient(180deg, #2ec061 0%, #13a546 100%);
+        background: linear-gradient(180deg, #2ec061 30%, #13a546 70%);
         box-shadow: $button-success-shadow;
     }
 }
