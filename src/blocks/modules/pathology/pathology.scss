@@ -1,19 +1,19 @@
 .pathology {
     background-color: $gray-200;
-    padding: 47px 25px 100px 25px;
+    padding: 50px 25px 100px 25px;
 
     &__heading {
-        width: 300px;
-        margin: 0 auto 25px auto;
+        margin: 0 0 25px 0;
         color: $primary;
+
+        @include media-breakpoint-up(lg) {
+            width: auto;
+            margin: 0 auto 25px auto;
+        }
     }
 
     &__separator {
-        margin-bottom: 65px;
-
-        @include media-breakpoint-up(lg) {
-            margin: 25px 0 75px 0;
-        }
+        margin: 0 0 75px 0;
     }
 
     &__list {
@@ -108,6 +108,6 @@
     }
 
     @include media-breakpoint-up(lg) {
-        padding: 47px 30px 100px 30px;
+        padding: 115px 25px;
     }
 }
