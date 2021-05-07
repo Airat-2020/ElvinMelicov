@@ -1,32 +1,26 @@
 <section class="promo">
     <div class="container">
         <div class="promo__inner">
-            <div class="container">
-                <div class="promo__heading-inner">
+            <div class="promo__heading-inner">
                     <h1 class="promo__heading">
                         <span class="h1">Меликов</span><br>
                         <span class="h2">Эльвин Аббасалиевич</span>
                     </h1>
                 </div>
-            </div>
             <p class="p promo__about">
                 кандидат медицинских наук<br>
                 челюстно-лицевой хирург<br>
                 хирург-имплантолог
             </p>
-            <picture class="promo__dr">
-                <source media="(min-width: 1350px)" srcset="../../../img/svg/dr-desktop.svg">
-                <img src="../../../img/svg/dr-mobile.svg" alt="" aria-hidden="true">
-            </picture>
-            <img src="../../../img/promo-shadow.png" class="promo__shadow" alt="" aria-hidden="true">
-<!--            <picture class="promo__doctor">-->
-<!--                <source media="(min-width: 1350px)" srcset="../../../img/doctor-1-desktop.png">-->
-<!--                <img src="../../../img/doctor-1-mobile.png" alt="Доктор Меликов">-->
-<!--            </picture>-->
-            <picture class="promo__melicov">
-                <source media="(min-width: 1350px)" srcset="../../../img/svg/melikov-desktop.svg">
-                <img src="../../../img/svg/melicov-mobile.svg" alt="" aria-hidden="true">
-            </picture>
+            <svg class="promo__dr">
+                <use xlink:href="img/sprites/sprite.svg#doctor-sign"></use>
+            </svg>
+
+            <img src="../../../img/promo-doctor.png" class="promo__doctor"  alt="Доктор Меликов">
+
+            <svg class="promo__melicov">
+                <use xlink:href="img/sprites/sprite.svg#melicov"></use>
+            </svg>
             <form class="promo__form form">
                 <span class="form__span">
                     Запишитесь на консультацию
