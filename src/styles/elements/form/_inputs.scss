@@ -1,88 +1,91 @@
-input{
-  border: none;
-  background-color: transparent;
+/* stylelint-disable plugin/selector-bem-pattern */
+
+input {
+    border: none;
+    background-color: transparent;
 }
 
 .input-text {
-  @include text-body();
-  border: none;
-  border-bottom: 1px solid $primary;
-  color: $primary;
-  border-radius: 0;
-  display: block;
+    display: block;
+    border: none;
+    border-bottom: 1px solid $primary;
+    color: $primary;
+    border-radius: 0;
 
-  &--light {
-    border-bottom: 1px solid $light;
-    color: $light;
-  }
+    &--light {
+        border-bottom: 1px solid $light;
+        color: $light;
+    }
+    @include text-body();
 }
 
+$checkbox-size: 22px;
+
 .checkbox {
-  position: relative;
+    position: relative;
+    padding-left: $checkbox-size + 10px;
+    line-height: 1;
+    &__title {
+        font-size: 12px;
+        line-height: 14px;
 
-  &__label {
-    display: flex;
-    align-items: center;
-    font-size: 12px;
-    line-height: 14px;
-    font-weight: 700;
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: $checkbox-size;
+            height: $checkbox-size;
+            border-radius: 3px;
+            background-color: $primary;
+        }
 
-    &::before {
-      content: "";
-      width: 22px;
-      height: 22px;
-      background-color: $primary;
-      border-radius: 3px;
-      margin-right: 11px;
-      display: inline-block;
-      background-repeat: no-repeat;
-      background-position: center center;
+        &::after {
+            content: "";
+            display: none;
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            width: 14px;
+            height: 9px;
+            border-radius: 1px;
+            border-left: 3px solid $secondary;
+            border-bottom: 3px solid $secondary;
+            transform: rotate(-55deg);
+        }
     }
-  }
 
-  &__label--light {
-    display: flex;
-    align-items: center;
-    font-size: 12px;
-    line-height: 14px;
-    font-weight: 700;
+    &__input {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        pointer-events: none;
 
-    &::before {
-      content: "";
-      width: 22px;
-      height: 22px;
-      background-color: $light;
-      border-radius: 3px;
-      margin-right: 11px;
-      display: inline-block;
-      background-repeat: no-repeat;
-      background-position: center center;
+        &:checked {
+            & ~ .checkbox__title::after {
+                display: block;
+            }
+        }
     }
-  }
 
-  &__input {
-    position: absolute;
-    height: 1px;
-    width: 1px;
-    opacity: 0;
-    pointer-events: none;
+    &--light {
+        .checkbox__title {
+            color: $light;
 
-    &:checked ~ .checkbox__label::before {
-      background-image: url("../../../img/svg/icon-tick.svg");
-      background-position: center;
+            &::before {
+                background-color: $light;
+            }
+
+            &::after {
+                border-left-color: $secondary;
+                border-bottom-color: $secondary;
+            }
+        }
     }
-  }
+}
 
-  &__input--light {
-    position: absolute;
-    height: 1px;
-    width: 1px;
-    opacity: 0;
-    pointer-events: none;
-
-    &:checked ~ .checkbox__label--light::before {
-      background-image: url("../../../img/svg/icon-tick-blue.svg");
-      background-position: center;
-    }
-  }
+.form-group {
+    margin-bottom: 25px;
 }

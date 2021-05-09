@@ -1,0 +1,249 @@
+.pathology-first-modal {
+
+    &__logo {
+        display: block;
+        width: 147px;
+        height: 12px;
+        margin: 5px 20px 35px 20px;
+        fill: $secondary;
+
+        @include media-breakpoint-up(lg) {
+            display: block;
+            margin-left: 20px;
+            margin-bottom: 50px;
+        }
+    }
+
+    &__info {
+        padding: 0 20px 40px 20px;
+
+        @include media-breakpoint-up(lg) {
+            display: block;
+            padding: 110px 20px 60px 40px;
+        }
+    }
+
+    &__subheading {
+        font-size: 18px;
+        font-weight: 900;
+        color: $primary;
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        margin: 0;
+    }
+
+    &__img-wrap {
+        @include media-breakpoint-up(lg) {
+            display: block;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        display: flex;
+        max-width: 640px;
+    }
+
+    img {
+
+        @include media-breakpoint-up(lg) {
+            width: 308px;
+            height: 293px;
+            margin-bottom: 50px;
+        }
+    }
+}
+
+.pathology-second-modal {
+
+    &__logo {
+        display: block;
+        width: 147px;
+        height: 13px;
+        margin: 0 20px 0 auto;
+        fill: $secondary;
+
+        @include media-breakpoint-up(lg) {
+            position: absolute;
+            right: 40px;
+            bottom: 40px;
+        }
+    }
+
+    &__info {
+        padding: 35px 20px 40px 20px;
+
+        @include media-breakpoint-up(lg) {
+            padding: 40px 25px 75px 40px;
+        }
+    }
+
+    &__subheading {
+        font-size: 18px;
+        font-weight: 900;
+        color: $primary;
+        margin-bottom: 25px;
+    }
+
+    &__text {
+        margin: 0;
+    }
+
+    @include media-breakpoint-up(lg) {
+        display: flex;
+        max-width: 640px;
+    }
+
+    img {
+        margin-left: 25px;
+        margin-bottom: 25px;
+
+        @include media-breakpoint-up(lg) {
+            width: 275px;
+            height: 217px;
+            margin: 55px 20px 75px 0;
+        }
+    }
+}
+
+.pathology-third-modal {
+
+    &__logo {
+        display: block;
+        width: 147px;
+        height: 13px;
+        margin: 20px 0 40px 20px;
+        fill: $secondary;
+
+        @include media-breakpoint-up(lg) {
+            position: absolute;
+            right: 25px;
+            bottom: 40px;
+            margin: 0;
+        }
+    }
+
+    &__info {
+        padding: 0 20px 50px 20px;
+    }
+
+    &__subheading {
+        font-size: 18px;
+        font-weight: 900;
+        color: $primary;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        margin: 0;
+    }
+
+    @include media-breakpoint-up(lg) {
+        display: flex;
+        max-width: 640px;
+    }
+
+    img {
+        width: 100%;
+
+        @include media-breakpoint-up(lg) {
+            width: 640px;
+            height: 357px;
+        }
+    }
+}
+
+.pathology-fourth-modal {
+
+    &__logo {
+        display: block;
+        width: 147px;
+        height: 13px;
+        margin: 0 0 25px 20px;
+        fill: $secondary;
+
+        @include media-breakpoint-up(lg) {
+            position: absolute;
+            right: 225px;
+            bottom: 20px;
+            margin: 0;
+        }
+    }
+
+    &__info {
+        padding: 35px 20px 0 20px;
+    }
+
+    &__subheading {
+        font-size: 18px;
+        font-weight: 900;
+        color: $primary;
+        margin-bottom: 25px;
+    }
+
+    &__text {
+        margin: 0;
+    }
+
+    @include media-breakpoint-up(lg) {
+        display: flex;
+        max-width: 640px;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto 35px auto;
+    }
+}
+
+.pathology-fifth-modal {
+
+    &__logo {
+        display: block;
+        width: 147px;
+        height: 13px;
+        margin: 0 0 30px 20px;
+        fill: $secondary;
+    }
+
+    &__info {
+        padding: 0 20px 25px 20px;
+
+        @include media-breakpoint-up(lg) {
+            padding: 60px 20px 25px 75px;
+        }
+    }
+
+    &__subheading {
+        font-size: 18px;
+        font-weight: 900;
+        color: $primary;
+        margin-bottom: 10px;
+
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__text {
+        margin: 0;
+    }
+
+    @include media-breakpoint-up(lg) {
+        display: flex;
+        max-width: 640px;
+    }
+
+    img {
+        display: block;
+        margin-top: 15px;
+        margin-bottom: 15px;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+    }
+}

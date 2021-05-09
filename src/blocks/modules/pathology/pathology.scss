@@ -1,98 +1,113 @@
-.pathology{
-  background-color: $gray-200;
-  padding: 47px 25px 100px 25px;
+.pathology {
+    background-color: $gray-200;
+    padding: 50px 25px 100px 25px;
 
-  @include media-breakpoint-up(lg) {
-    padding: 115px 30px 117px 30px;
-    display: flex;
-  }
+    &__heading {
+        margin: 0 0 25px 0;
+        color: $primary;
 
-  &__heading{
-    color: $primary;
-    margin-bottom: 93px;
+        @include media-breakpoint-up(lg) {
+            width: auto;
+            margin: 0 auto 25px auto;
+        }
+    }
+
+    &__separator {
+        margin: 0 0 75px 0;
+    }
+
+    &__list {
+        margin: -25px;
+        padding: 0;
+        list-style: none;
+
+        @include media-breakpoint-up(lg) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: -10px;
+        }
+    }
+
+    &__item {
+        box-shadow: -5px -5px 25px #ffffff,
+            5px 5px 30px rgba(13, 39, 80, 0.16);
+        border-radius: 12px;
+        padding-bottom: 28px;
+        margin: 25px;
+
+        @include media-breakpoint-up(lg) {
+            flex-grow: 1;
+            position: relative;
+            width: 227px;
+            max-width: 400px;
+            margin: 10px;
+        }
+
+        img {
+            @include media-breakpoint-up(lg) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__subheading {
+        color: $primary;
+        font-weight: 700;
+        margin: 0 13px 23px 13px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        position: relative;
+        font-family: $font-family-heading;
+        font-size: 14px;
+        font-weight: 900;
+        line-height: 17px;
+        color: $secondary;
+        margin-left: 13px;
+
+        @include media-breakpoint-up(lg) {
+            position: absolute;
+            bottom: 20px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 25px;
+            height: 2px;
+            margin-left: 120px;
+            background-color: $secondary;
+        }
+
+        &::after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            width: 0;
+            height: 0;
+            margin-left: 145px;
+            border-top: 3px solid transparent;
+            border-bottom: 3px solid transparent;
+            border-left: 5px solid $secondary;
+        }
+    }
+
+    &__button {
+        display: block;
+        width: 265px;
+        margin: 60px auto 0 auto;
+        padding: 15px;
+
+        @include media-breakpoint-up(lg) {
+            display: block;
+            margin: 80px auto 0 auto;
+        }
+    }
 
     @include media-breakpoint-up(lg) {
-      margin-bottom: 100px;
+        padding: 115px 25px;
     }
-
-    &::after{
-      display: block;
-      content: "";
-      width: 120px;
-      height: 3px;
-      border-radius: 3px;
-      background: $strip;
-      margin-top: 25px;
-    }
-  }
-
-  &__list{
-    @include media-breakpoint-up(lg) {
-      display: flex;
-      flex-wrap: wrap;
-      margin: -20px;
-    }
-  }
-
-  &__item{
-    box-shadow: -5px -5px 25px #ffffff,
-                5px 5px 30px rgba(13, 39, 80, 0.16);
-    border-radius: 12px;
-    padding-bottom: 28px;
-    margin-bottom: 25px;
-
-    @include media-breakpoint-up(lg) {
-      width: 300px;
-      margin: 20px;
-    }
-  }
-
-  &__p{
-    color: $primary;
-    font-weight: 700;
-    margin: 0 13px 23px 13px;
-  }
-
-  &__link{
-    font-family: $font-family-heading;
-    font-size: 14px;
-    font-weight: 900;
-    line-height: 17px;
-    color: $secondary;
-    margin-left: 13px;
-    display: flex;
-    position: relative;
-    align-items: center;
-
-    &::before{
-      width: 25px;
-      height: 2px;
-      content: "";
-      background-color: $secondary;
-      transform: translateX(120px);
-      position: absolute;
-    }
-
-    &::after{
-      width: 0;
-      height: 0;
-      display: inline-block;
-      content: "";
-      border-top: 3px solid transparent;
-      border-bottom: 3px solid transparent;
-      border-left: 5px solid $secondary;
-      position: absolute;
-      transform: translateX(145px);
-    }
-  }
-
-  &__button{
-    padding: 15px 30px 11px 30px;
-    margin-top: 60px;
-
-    @include media-breakpoint-up(lg) {
-      margin: 80px auto 0 auto;
-      display: block;
-    }
-  }
 }
