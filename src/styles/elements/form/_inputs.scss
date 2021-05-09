@@ -19,43 +19,55 @@ input {
     }
 }
 
+$checkbox-size: 22px;
+
 .checkbox {
     position: relative;
+    padding-left: $checkbox-size + 10px;
+    line-height: 1;
 
-    &__label {
-        display: flex;
-        align-items: center;
-        font-size: 12px;
-        line-height: 14px;
-        font-weight: 700;
-        margin-left: 33px;
-
-        &::before {
-            display: block;
-            width: 22px;
-            height: 22px;
-            content: "";
-            position: absolute;
-            left: 0;
-            border-radius: 3px;
-            background-color: $primary;
-            background-position: center center;
-        }
-
-        &--light{
+    &--light {
+        .checkbox__title {
             color: $light;
 
             &::before {
-                display: block;
-                width: 22px;
-                height: 22px;
-                content: "";
-                left: 0;
-                position: absolute;
-                border-radius: 3px;
                 background-color: $light;
-                background-position: center center;
             }
+
+            &::after {
+                border-left-color: $secondary;
+                border-bottom-color: $secondary;
+            }
+        }
+    }
+    &__title {
+        font-size: 12px;
+        line-height: 14px;
+
+        &::before {
+            content: "";
+            display: block;
+            width: $checkbox-size;
+            height: $checkbox-size;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 3px;
+            background-color: $primary;
+        }
+
+        &::after {
+            content: "";
+            display: none;
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            width: 14px;
+            height: 9px;
+            border-radius: 1px;
+            border-left: 3px solid $secondary;
+            border-bottom: 3px solid $secondary;
+            transform: rotate(-55deg);
         }
     }
 
@@ -66,32 +78,14 @@ input {
         opacity: 0;
         pointer-events: none;
 
-        &:checked ~ .checkbox__label::after {
-            display: block;
-            content: "";
-            position: absolute;
-            left: 4px;
-            width: 12px;
-            height: 12px;
-            border-radius: 1px;
-            border-left: 4px solid $light;
-            border-bottom: 4px solid $light;
-            transform: rotate(-45deg);
-            background-position: center center;
-        }
-
-        &--light:checked ~ .checkbox__label--light::after {
-            display: block;
-            content: "";
-            position: absolute;
-            left: 4px;
-            width: 14px;
-            height: 9px;
-            border-radius: 1px;
-            border-left: 3px solid $secondary;
-            border-bottom: 3px solid $secondary;
-            transform: rotate(-55deg);
-            background-position: center center;
+        &:checked {
+            & ~ .checkbox__title::after {
+                display: block;
+            }
         }
     }
+}
+
+.form-group{
+    margin-bottom: 25px;
 }
