@@ -1,88 +1,197 @@
-.about{
-  background-color: $secondary;
-  padding: 49px 25px 66px 25px;
+.about {
+    overflow: hidden;
+    padding: 50px 25px 40px 25px;
+    background-color: $secondary;
 
-  &__heading{
-    color: $light;
-    text-align: center;
-    margin-bottom: 100px;
-
-    &::after{
-      display: block;
-      margin: 15px auto 0 auto;
-      content: "";
-      width: 120px;
-      height: 3px;
-      border-radius: 3px;
-      background: $strip-light;
+    &__inner {
+        @include media-breakpoint-up(lg) {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            @include make-row($gutter: 40px);
+        }
     }
-  }
 
-  &__img-wrapper{
-    position: relative;
-    margin-bottom: 30px;
-  }
+    &__left {
+        display: block;
 
-  &__bg{
-    position: absolute;
-    z-index: 1;
-    left: 5px;
-    bottom: 5px;
-  }
-
-  &__circle{
-    position: absolute;
-    z-index: 2;
-    left: -25px;
-    top: -220px;
-  }
-
-  &__logo{
-    position: absolute;
-    left: 40px;
-    top: 10px;
-    z-index: 3;
-  }
-
-  &__doctor{
-    position: relative;
-    z-index: 4;
-    bottom: 0;
-    right: 30px;
-  }
-
-  &__title{
-    color: $light;
-    text-align: center;
-    padding-bottom: 20px;
-    padding-top: 35px;
-  }
-
-  &__p{
-    color: $light;
-  }
-
-  &__list{
-    margin: -25px;
-  }
-
-  &__item{
-    font-family: $font-family-text-body;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 21px;
-    color: $light;
-    margin: 25px;
-
-    &::before{
-      background-image: url("../../../img/svg/item-tick.svg");
-      background-repeat: no-repeat;
-      content: "";
-      display: block;
-      position: absolute;
-      width: 25px;
-      height: 16px;
-      transform: translateX(-40px);
+        @include media-breakpoint-up(lg) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
     }
-  }
+
+    &__heading {
+        color: $light;
+        text-align: center;
+        margin-bottom: 100px;
+
+        @include media-breakpoint-up(lg) {
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            width: 120px;
+            height: 3px;
+            margin: 15px auto 0 auto;
+            border-radius: 3px;
+            background: $strip-light;
+        }
+    }
+
+    &__decoration {
+        position: relative;
+        margin-bottom: 30px;
+
+        @include media-breakpoint-up(lg) {
+            margin: 0;
+        }
+
+        @include media-breakpoint-up(lg) {
+            @include make-col-ready($gutter: 40px);
+            @include make-col(5, 10);
+        }
+
+        @include media-breakpoint-up(xl) {
+            @include make-col(5, 10);
+        }
+
+        &::before {
+            content: "";
+            box-sizing: border-box;
+            display: block;
+            position: absolute;
+            z-index: 1;
+            bottom: 120px;
+            left: 0;
+            width: 230px;
+            height: 230px;
+            border: 50px solid $light;
+            border-radius: 50%;
+            filter: drop-shadow(0 0 150px #ffffff);
+
+            @include media-breakpoint-up(lg) {
+                width: 460px;
+                height: 460px;
+                border: 95px solid $light;
+            }
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        z-index: 0;
+        bottom: 5px;
+        left: 5px;
+
+        @include media-breakpoint-up(lg) {
+            bottom: 0;
+            left: -250px;
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        z-index: 2;
+        top: 50px;
+        left: 0;
+        width: 105px;
+        height: 10px;
+        transform: rotate(90deg);
+
+        @include media-breakpoint-up(lg) {
+            z-index: 5;
+            top: 180px;
+            width: 207px;
+            height: 19px;
+        }
+    }
+
+    &__doctor {
+        position: relative;
+        z-index: 4;
+        right: 30px;
+        bottom: 0;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: auto;
+            margin-bottom: 0;
+        }
+    }
+
+    &__info {
+        @include media-breakpoint-up(lg) {
+            @include make-col-ready($gutter: 40px);
+            @include make-col(5, 10);
+        }
+
+        @include media-breakpoint-up(xl) {
+            @include make-col(5, 10);
+        }
+    }
+
+    &__title {
+        color: $light;
+        text-align: center;
+        margin-bottom: 25px;
+        font-weight: 700;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__description {
+        color: $light;
+        font-weight: 200;
+        margin-bottom: 35px;
+    }
+
+    &__list {
+        margin: 0 -25px;
+        padding-left: 40px;
+        list-style: none;
+
+        @include media-breakpoint-up(lg) {
+            display: flex;
+            margin: 0 -30px;
+            padding-left: 0;
+        }
+    }
+
+    &__item {
+        display: block;
+        position: relative;
+        margin: 25px;
+        font-family: $font-family-text-body;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 21px;
+        color: $light;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 25px;
+            height: 16px;
+            transform: translateX(-40px);
+            background-image: url("../../../img/svg/item-tick.svg");
+            background-repeat: no-repeat;
+
+            @include media-breakpoint-up(lg) {
+                top: -35px;
+                left: 0;
+                width: 28px;
+                height: 21px;
+                transform: none;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: 50px 25px 0 25px;
+    }
 }
