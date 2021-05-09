@@ -1,0 +1,127 @@
+.hystmodal__opened {
+    position: fixed;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+}
+.hystmodal__shadow {
+    display: block;
+    position: fixed;
+    z-index: 98;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    border: none;
+    transition: opacity 0.15s ease;
+    pointer-events: none;
+    opacity: 0;
+    background-color: $black;
+}
+.hystmodal__shadow--show {
+    pointer-events: auto;
+    opacity: 0.6;
+}
+.hystmodal {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    opacity: 1;
+    pointer-events: none;
+    visibility: hidden;
+}
+.hystmodal--active {
+    opacity: 1;
+}
+.hystmodal--moved, .hystmodal--active {
+    pointer-events: auto;
+    visibility: visible;
+}
+.hystmodal__wrap {
+    display: flex;
+    flex-flow: column nowrap;
+    flex-grow: 0;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 10px 25px;
+    margin: auto;
+}
+.hystmodal__window {
+    box-sizing: border-box;
+    flex-grow: 0;
+    flex-shrink: 0;
+    box-shadow: 0 0 30px rgba(21, 44, 92, 0.3);
+    border-radius: 20px;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 50px 0;
+    transform: scale(0.9);
+    transition: transform 0.2s ease 0s, opacity 0.2s ease 0s;
+    background-color: $gray-200;
+    opacity: 0;
+}
+.hystmodal--active .hystmodal__window {
+    transform: scale(1);
+    opacity: 1;
+}
+.hystmodal__close {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $secondary;
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-size: 0;
+    cursor: pointer;
+    outline: none;
+    border-radius: 50%;
+
+    &::before,
+    &::after{
+        width: 15px;
+        height: 1px;
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: $secondary;
+        right: 7px;
+    }
+
+    &::before{
+        transform: rotate(50deg);
+    }
+
+    &::after{
+        transform: rotate(-50deg);
+    }
+}
+
+.hystmodal__close:focus {
+    outline: 2px dotted #afb3b9;
+    outline-offset: 2px;
+}
+@media all and (max-width:767px) {
+    .hystmodal__window {
+        margin: 0;
+    }
+}

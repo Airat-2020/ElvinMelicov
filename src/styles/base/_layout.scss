@@ -5,10 +5,27 @@
 }
 
 .container {
+    padding-left: 15px;
+    padding-right: 15px;
     max-width: 1170px;
     margin: 0 auto;
+
+    @include media-breakpoint-up(md) {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
 }
 
 a {
     text-decoration: none;
+}
+
+.heading-separator {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 3px;
+    border-radius: 3px;
+    background-image: $strip;
+    border: none;
 }
