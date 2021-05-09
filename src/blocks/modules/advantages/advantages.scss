@@ -1,0 +1,186 @@
+.advantages {
+    background-color: $gray-200;
+    padding-top: 10px;
+    padding-bottom: 70px;
+    overflow: hidden;
+
+    .container {
+        padding: 0;
+        @include media-breakpoint-up(lg) {
+            padding: 0 20px;
+        }
+    }
+
+    &__inner {
+        @include media-breakpoint-up(lg) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__info {
+        margin-bottom: 75px;
+        @include media-breakpoint-up(lg) {
+            @include make-col-ready($gutter: 40px);
+            @include make-col(1.7, 2.7);
+        }
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        margin: -25px;
+        padding: 0 10px 75px 10px;
+
+        @include media-breakpoint-up(lg) {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            margin: -20px;
+            padding: 0;
+        }
+    }
+
+    &__item {
+        min-height: 300px;
+        margin: 25px;
+        padding: 10px 25px;
+        box-shadow: -5px -5px 25px $light,
+            5px 5px 30px rgba(13, 39, 80, 0.16);
+        border-radius: 12px;
+
+        @include media-breakpoint-up(lg) {
+            width: 300px;
+            margin: 20px;
+        }
+    }
+
+    &__title {
+        font-family: $font-family-heading;
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 78px;
+        color: $secondary;
+        margin-bottom: 15px;
+    }
+
+    &__text {
+        font-weight: 400;
+        color: $primary;
+    }
+
+    &__doctor {
+        position: relative;
+        z-index: 1;
+
+        @include media-breakpoint-up(lg) {
+
+        }
+    }
+
+    &__decoration {
+        text-align: right;
+        position: relative;
+
+        @include media-breakpoint-up(lg) {
+            @include make-col-ready($gutter: 40px);
+            @include make-col(1, 2.7);
+        }
+
+        &::after {
+            content: "";
+            box-sizing: border-box;
+            display: block;
+            position: absolute;
+            z-index: 0;
+            right: -20px;
+            bottom: 80px;
+            width: 330px;
+            height: 330px;
+            border: 80px solid $info;
+            border-radius: 50%;
+
+            @include media-breakpoint-up(lg) {
+                top: 100px;
+                right: 0;
+                bottom: 0;
+                width: 450px;
+                height: 450px;
+                border: 120px solid $info;
+            }
+        }
+    }
+
+    &__description {
+        box-sizing: border-box;
+        position: relative;
+        z-index: 2;
+        width: 260px;
+        margin: -145px auto 100px auto;
+        border: 1px solid rgba(255, 255, 255, 0.74);
+        padding: 15px 20px;
+        background: linear-gradient(116.34deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.6) 100%);
+        box-shadow: 0 0 7px rgba(201, 201, 201, 0.1);
+        backdrop-filter: blur(8px);
+        border-radius: 10px;
+        text-align: left;
+
+        .span {
+            display: block;
+            color: $primary;
+
+            &-1 {
+                font-family: $font-family-heading;
+                font-size: 18px;
+                font-weight: 800;
+                line-height: 22px;
+
+                @include media-breakpoint-up(lg) {
+                    font-size: 24px;
+                    line-height: 30px;
+                }
+            }
+
+            &-2 {
+                font-family: $font-family-heading;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 20px;
+
+                @include media-breakpoint-up(lg) {
+                    font-size: 24px;
+                    line-height: 27px;
+                }
+            }
+
+            &-3 {
+                font-family: $font-family-text-body;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 18px;
+
+                @include media-breakpoint-up(lg) {
+                    font-size: 14px;
+                    line-height: 21px;
+                }
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            width: 330px;
+        }
+    }
+
+    &__button {
+        display: block;
+        margin: 0 auto;
+        padding: 13px 6px;
+        font-weight: 700;
+
+        @include media-breakpoint-up(lg) {
+            margin: 0 50% 0 20%;
+            padding: 16px 40px 12px 40px;
+        }
+    }
+}
