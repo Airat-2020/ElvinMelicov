@@ -23,7 +23,7 @@
         margin-bottom: 75px;
         @include media-breakpoint-up(lg) {
             @include make-col-ready($gutter: 40px);
-            @include make-col(7, 4);
+            @include make-col(7, 5);
         }
     }
 
