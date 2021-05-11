@@ -6,7 +6,7 @@
     &__inner {
         @include media-breakpoint-up(lg) {
             display: flex;
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
             justify-content: space-between;
             @include make-row($gutter: 40px);
         }
@@ -27,17 +27,14 @@
         text-align: center;
         margin-bottom: 100px;
 
-        @include media-breakpoint-up(lg) {
-        }
-
         &::after {
             content: "";
             display: block;
             width: 120px;
             height: 3px;
-            margin: 15px auto 0 auto;
+            margin: 15px auto 0;
             border-radius: 3px;
-            background: $strip-light;
+            background-image: $strip-light;
         }
     }
 
@@ -51,10 +48,6 @@
 
         @include media-breakpoint-up(lg) {
             @include make-col-ready($gutter: 40px);
-            @include make-col(5, 10);
-        }
-
-        @include media-breakpoint-up(xl) {
             @include make-col(5, 10);
         }
 
@@ -122,12 +115,11 @@
     }
 
     &__info {
+        list-style: none;
+        padding-left: 0;
+
         @include media-breakpoint-up(lg) {
             @include make-col-ready($gutter: 40px);
-            @include make-col(5, 10);
-        }
-
-        @include media-breakpoint-up(xl) {
             @include make-col(5, 10);
         }
     }
@@ -175,18 +167,17 @@
             content: "";
             display: block;
             position: absolute;
+            left: -35px;
             width: 25px;
-            height: 16px;
-            transform: translateX(-40px);
-            background-image: url("../../../img/svg/item-tick.svg");
-            background-repeat: no-repeat;
+            height: 9px;
+            border-radius: 1px;
+            border-left: 2px solid $light;
+            border-bottom: 2px solid $light;
+            transform: rotate(-55deg);
 
             @include media-breakpoint-up(lg) {
-                top: -35px;
+                top: -30px;
                 left: 0;
-                width: 28px;
-                height: 21px;
-                transform: none;
             }
         }
     }
