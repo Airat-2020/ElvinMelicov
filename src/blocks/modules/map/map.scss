@@ -1,0 +1,18 @@
+.map {
+    background-image: linear-gradient( $gray-200 50%, $secondary 50%);
+
+    iframe {
+        display: block;
+        width: 90%;
+        height: 482px;
+        overflow: hidden;
+        margin: 0 auto;
+        border: none;
+        border-radius: 10px;
+        filter: drop-shadow(0 -5px 30px rgba(21, 44, 92, 0.2));
+
+        @include media-breakpoint-up(md) {
+            width: 80%;
+        }
+    }
+}
