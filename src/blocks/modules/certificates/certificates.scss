@@ -1,0 +1,93 @@
+.certificates {
+    background-color: $gray-200;
+    text-align: center;
+
+    .heading-separator {
+        margin: 0 auto 55px auto;
+
+        @include media-breakpoint-up(lg) {
+            margin: 0 auto 90px 0;
+        }
+    }
+
+    &__list {
+        margin: -25px;
+        @include list-unstyled;
+
+        @include media-breakpoint-up(lg) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: -25px -15px;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 21px;
+            margin: 25px;
+            text-align: left;
+
+            @include media-breakpoint-up(lg) {
+                width: 500px;
+                font-size: 16px;
+                line-height: 24px;
+                margin: 25px 15px;
+            }
+        }
+    }
+
+    &__decoration {
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        background-color: $info;
+        border-radius: 50%;
+        margin-right: 15px;
+
+        &--2n {
+            background-color: $decoration;
+        }
+
+        @include media-breakpoint-up(lg) {
+            width: 100px;
+            height: 100px;
+            margin-right: 25px;
+        }
+
+        svg {
+            width: 23px;
+            height: 30px;
+
+            @include media-breakpoint-up(lg) {
+                width: 49px;
+                height: 64px;
+            }
+        }
+    }
+
+    &__link {
+        margin: 60px auto 0 auto;
+        padding: 12px 30px 6px 30px;
+
+        @include media-breakpoint-up(lg) {
+            display: block;
+            width: 215px;
+            padding: 12px 15px 6px 15px;
+            text-align: center;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        text-align: left;
+    }
+
+    h2 {
+        color: $primary;
+    }
+}
