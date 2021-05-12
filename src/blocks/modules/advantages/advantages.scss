@@ -23,7 +23,7 @@
         margin-bottom: 75px;
         @include media-breakpoint-up(lg) {
             @include make-col-ready($gutter: 40px);
-            @include make-col(7, 5);
+            @include make-col(7);
         }
     }
 
@@ -82,7 +82,7 @@
 
         @include media-breakpoint-up(lg) {
             @include make-col-ready($gutter: 40px);
-            @include make-col(5, 7);
+            @include make-col(5);
         }
 
         &::after {
