@@ -6,7 +6,6 @@
     &__inner {
         @include media-breakpoint-up(lg) {
             display: flex;
-            flex-wrap: wrap;
             justify-content: space-between;
             @include make-row($gutter: 40px);
         }
@@ -137,8 +136,16 @@
 
     &__description {
         color: $light;
-        font-weight: 200;
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 300;
         margin-bottom: 35px;
+        @include list-unstyled;
+
+        @include media-breakpoint-up(md) {
+            font-size: 16px;
+            line-height: 24px;
+        }
     }
 
     &__list {
