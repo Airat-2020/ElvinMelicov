@@ -1,0 +1,280 @@
+.promo {
+    display: flex;
+    position: relative;
+    min-height: calc(100vh - 51px);
+    background-color: $secondary;
+    background-image: url("../../../img/promo-bg-mobile.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    overflow: hidden;
+
+    .container {
+        display: flex;
+        flex-grow: 1;
+    }
+
+    &__inner {
+        display: flex;
+        width: 100%;
+
+        @include media-breakpoint-up(lg) {
+            @include make-row($gutter: 40px);
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
+        @include media-breakpoint-up(lg) {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            @include make-col-ready($gutter: 40px);
+            @include make-col(4, 10);
+        }
+
+        @include media-breakpoint-up(xl) {
+            @include make-col(5, 10);
+        }
+    }
+
+    &__heading {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-bottom: 15px;
+        color: $light;
+
+        .h2 {
+            font-size: 18px;
+            line-height: 24px;
+            margin: 0;
+
+            @include media-breakpoint-up(xl) {
+                font-size: 36px;
+                line-height: 50px;
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            text-align: right;
+        }
+
+        @include media-breakpoint-up(xl) {
+            font-size: 64px;
+            line-height: 80px;
+            text-align: right;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__description {
+        max-width: 240px;
+        color: $light;
+        font-weight: 300;
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: 0;
+        }
+
+        @include media-breakpoint-up(lg) {
+            font-size: 18px;
+            line-height: 27px;
+            text-align: right;
+            margin-bottom: 30px;
+            margin-left: auto;
+        }
+    }
+
+    &__button {
+        display: block;
+        position: relative;
+        z-index: 5;
+        margin: auto auto 0 auto;
+        padding: 15px 30px;
+
+        @include media-breakpoint-up(lg) {
+            display: none;
+        }
+    }
+
+    &__decoration {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        @include media-breakpoint-up(lg) {
+            display: flex;
+            align-items: flex-end;
+            position: relative;
+            padding-top: 30px;
+            padding-bottom: 30px;
+
+            @include make-col-ready($gutter: 40px);
+            @include make-col(6, 10);
+        }
+
+        @include media-breakpoint-up(xl) {
+            @include make-col(5, 10);
+        }
+
+        &::before {
+            display: block;
+            position: absolute;
+            z-index: 0;
+            top: 0;
+            left: 0;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(50% 50% at 50% 50%, #ffffff 0%, rgba(255, 255, 255, 0) 84.38%);
+            mix-blend-mode: overlay;
+            opacity: 0.58;
+            pointer-events: none;
+
+            @include media-breakpoint-up(lg) {
+                content: "";
+            }
+
+            @include media-breakpoint-up(xl) {
+                top: -10%;
+                left: -15%;
+                width: 700px;
+                height: 700px;
+            }
+        }
+    }
+
+    &__dr-sign {
+        position: absolute;
+        z-index: 0;
+        bottom: 100px;
+        left: 50px;
+        width: 240px;
+        height: 130px;
+
+        @include media-breakpoint-up(lg) {
+            right: 0;
+            bottom: 150px;
+            left: auto;
+            width: 240px * 2.2;
+            height: 130px * 2.2;
+        }
+
+        @include media-breakpoint-up(xl) {
+            right: -20%;
+            bottom: 150px;
+            left: auto;
+            width: 240px * 2.5;
+            height: 130px * 2.5;
+        }
+    }
+
+    &__doctor {
+        display: block;
+        position: relative;
+        z-index: 1;
+        max-width: 100%;
+        max-height: 100%;
+        transform: scale(1.25) translateX(40px);
+        transform-origin: bottom left;
+
+        @include media-breakpoint-up(sm) {
+            max-height: 75vh;
+            transform: none;
+        }
+
+        @include media-breakpoint-up(lg) {
+            position: absolute;
+            bottom: 0;
+            max-height: 100%;
+        }
+    }
+
+    &__melikov {
+        position: absolute;
+        z-index: 2;
+        bottom: 184px;
+        left: 34px;
+        width: 178px;
+        height: 19px;
+        transform: rotate(90deg);
+        transform-origin: 0 0;
+
+        @include media-breakpoint-up(lg) {
+            right: 20px;
+            bottom: 50px;
+            left: auto;
+            width: 178px * 2;
+            height: 19px * 2;
+            transform: none;
+        }
+    }
+
+    &__form {
+        display: none;
+
+        @include media-breakpoint-up(lg) {
+            display: block;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        min-height: calc(100vh - 135px);
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    @include media-breakpoint-up(xl) {
+        background-image: url("../../../img/promo-bg-desktop.png");
+    }
+}
+
+/* stylelint-disable plugin/selector-bem-pattern */
+.form {
+    margin-top: auto;
+    margin-bottom: auto;
+    position: relative;
+
+    .form-group {
+        max-width: 340px;
+    }
+
+    &__heading {
+        color: $light;
+        margin-bottom: 40px;
+
+        @include media-breakpoint-down(lg) {
+            font-size: 18px;
+            line-height: 26px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__submit {
+        display: block;
+        position: relative;
+        z-index: 5;
+        margin: 45px auto 0;
+        padding: 15px 50px;
+    }
+
+    &__input {
+        width: 100%;
+    }
+
+    &__link {
+        display: inline;
+        font-family: $font-family-text-body;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+        border-bottom: 1px solid $light;
+    }
+}
