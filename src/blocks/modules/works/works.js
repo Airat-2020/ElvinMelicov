@@ -3,3 +3,5 @@
 // const swiper = new Swiper('.swiper-container');
 //
 // console.log(swiper)
+
+// new Swiper(".swiper-container");

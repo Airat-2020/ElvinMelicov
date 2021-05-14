@@ -1,78 +1,52 @@
 .works {
-  background-color: $gray-200;
+    background-color: $gray-200;
 
-  &__heading{
-    @include media-breakpoint-up(lg) {
-      color: $primary;
-      display: block;
-      margin: 0 auto 62px auto;
-      text-align: center;
+    .p {
+        color: $primary;
+        font-weight: 400;
+        margin: 20px 25px 30px 25px;
+
+        span {
+            display: block;
+            font-weight: 700;
+        }
     }
 
-    &::after{
-      display: block;
-      margin: 15px auto 0 auto;
-      content: "";
-      width: 120px;
-      height: 3px;
-      border-radius: 3px;
-      background: $strip;
-    }
-  }
-
-  &__slider{
-    display: flex;
-    margin: -20px;
-  }
-
-  &__slide {
-    display: flex;
-    position: relative;
-    width: 460px;
-    height: 310px;
-    overflow: hidden;
-    margin: 20px;
-  }
-
-  &__img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-
-    img {
-      width: 460px;
-      height: 310px;
+    &__heading {
+        display: block;
+        margin: 0 auto;
+        color: $primary;
+        text-align: center;
     }
 
-    &--before {
-      z-index: 2;
+    &__list {
+        padding: 0;
     }
-  }
-}
-.range {
-  position: absolute;
-  appearance: none;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  margin: 0;
-  z-index: 3;
 
-  &::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 6px;
-    height: 600px;
-    background: white;
-    cursor: pointer;
-  }
-  &::-moz-range-thumb {
-    width: 6px;
-    height: 600px;
-    background: white;
-    cursor: pointer;
-  }
+    &__slide {
+        display: block;
+        position: relative;
+    }
+
+    &__img {
+        position: relative;
+        min-height: 215px;
+
+        img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+        }
+    }
+
+    &__before {
+        z-index: 0;
+        width: 100%;
+    }
+
+    &__after {
+        z-index: 1;
+        width: 50%;
+    }
 }
