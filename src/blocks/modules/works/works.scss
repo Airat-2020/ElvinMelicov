@@ -1,14 +1,68 @@
 .works {
     background-color: $gray-200;
+    overflow: hidden;
+
 
     .p {
-        color: $primary;
         font-weight: 400;
         margin: 20px 25px 30px 25px;
 
         span {
             display: block;
             font-weight: 700;
+        }
+    }
+
+    .swiper {
+        &-wrapper {
+            @include media-breakpoint-up(md) {
+                margin: -10px;
+            }
+        }
+
+        &-slide {
+            color: $primary;
+
+            @include media-breakpoint-up(md) {
+                margin: 10px;
+            }
+
+            svg {
+                position: absolute;
+                z-index: 5;
+                top: 30%;
+                left: 48%;
+            }
+
+            &-active {
+
+                svg, .works__img::before, .works__img::after {
+                    display: none;
+                }
+            }
+        }
+
+        &-pagination {
+            display: flex;
+            justify-content: center;
+            margin: -10px;
+
+            @include media-breakpoint-up(xl) {
+                display: none;
+            }
+        }
+
+        &-pagination-bullet {
+            display: block;
+            width: 15px;
+            height: 15px;
+            margin: 10px;
+            border-radius: 50%;
+            background-color: $gray-500;
+
+            &-active {
+                background-color: $primary;
+            }
         }
     }
 
@@ -19,24 +73,74 @@
         text-align: center;
     }
 
-    &__list {
+    &__slider {
+        display: flex;
         padding: 0;
     }
 
     &__slide {
         display: block;
         position: relative;
+        min-width: 100%;
+
+
+        @include media-breakpoint-up(md) {
+            width: calc(50% - 20px);
+            min-width: calc(50% - 20px);
+        }
+
+        @include media-breakpoint-up(xl) {
+            width: 30%;
+            min-width: 460px;
+        }
     }
 
     &__img {
         position: relative;
         min-height: 215px;
+        
+        @include media-breakpoint-up(md) {
+            min-width: calc(50% - 20px);
+            min-height: 310px;
+        }
 
+        @include media-breakpoint-up(xl) {
+            width: 100%;
+            min-height: 310px;
+        }
+
+        &::after {
+            @include media-breakpoint-up(xl) {
+                content: "";
+                display: block;
+                position: absolute;
+                z-index: 2;
+                width: 100%;
+                height: 100%;
+                background-image: url("../../../img/works-bg.png");
+                background-repeat: no-repeat;
+            }
+        }
+
+        &::before {
+            @include media-breakpoint-up(xl) {
+                content: "";
+                display: block;
+                position: absolute;
+                z-index: 3;
+                width: 100%;
+                height: 100%;
+                background-color: $light;
+                opacity: 0.75;
+            }
+        }
+        
         img {
             position: absolute;
             top: 0;
             right: 0;
             height: 100%;
+            overflow: hidden;
         }
     }
 
