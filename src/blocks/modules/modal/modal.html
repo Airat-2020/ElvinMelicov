@@ -151,3 +151,86 @@
         </div>
     </div>
 </div>
+
+<div class="hystmodal" id="consultation" aria-hidden="true">
+    <div class="hystmodal__wrap">
+        <div class="hystmodal__window" role="dialog" aria-modal="true">
+            <button data-hystclose class="hystmodal__close">Закрыть</button>
+
+            <div class="consultation-modal">
+
+                <div class="consultation-modal__img-wrap">
+                    <img class="consultation-modal__bg" src="../../../img/consultation-modal-bg.png" alt="" aria-hidden="true">
+                    <img class="consultation-modal__tool" src="../../../img/dentist-tool.png" alt="" aria-hidden="true">
+                    <svg class="consultation-modal__logo" aria-label="Логотип: Dr. Эльвин Меликов">
+                        <use xlink:href="img/sprites/sprite.svg#logo"></use>
+                    </svg>
+                </div>
+
+                <form class="consultation-modal__form form">
+                    <h3 class="form__heading">
+                        Запишитесь на консультацию
+                    </h3>
+                    <hr class="heading-separator">
+                    <div class="form-group">
+                        <label class="form__label label-text" for="name">
+                            Ваше имя
+                        </label>
+                        <input type="text" id="name" name="name" class="form__input input-text" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form__label label-text" for="tel">
+                            Ваш телефон
+                        </label>
+                        <input type="tel" id="tel" name="tel" class="form__input input-text" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="file" class="file label-file">
+                            <svg class="icon icon-sm">
+                                <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                            </svg>
+                            <input type="file" id="file" class="form__input form__file" checked required>
+                            <span class="file__title">
+                                <b>Прикрепить файл</b> (jpg, png, gif - не более 2Мб)
+                            </span>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkbox" class="checkbox">
+                            <input type="checkbox" id="checkbox" class="checkbox__input" checked required>
+                            <span class="checkbox__title">
+                                Я согласен с <a href="" class="form__link"> политикой конфиденциальности</a>
+                            </span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="form__submit btn btn--lg btn-danger" data-hystmodal="#thank">
+                        Записаться
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="hystmodal" id="thank" aria-hidden="true">
+    <div class="hystmodal__wrap">
+        <div class="hystmodal__window" role="dialog" aria-modal="true">
+            <button data-hystclose class="hystmodal__close">Закрыть</button>
+
+            <div class="thank">
+                <h4>
+                    Благодарим за обращение!
+                </h4>
+                <span>
+                    В ближайщее время с Вами свяжуться
+                </span>
+                <button type="button" class="btn btn-success" data-hystclose>
+                    ок
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
