@@ -153,4 +153,14 @@
         z-index: 1;
         width: 50%;
     }
+
+    &__button {
+        display: none;
+
+        @include media-breakpoint-up(lg) {
+            display: block;
+            margin: 50px auto 0 auto;
+            padding: 16px 35px 12px 35px;
+        }
+    }
 }
