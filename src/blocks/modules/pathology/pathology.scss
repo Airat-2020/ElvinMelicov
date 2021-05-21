@@ -13,8 +13,6 @@
         @include list-unstyled;
 
         @include media-breakpoint-up(sm) {
-            margin-top: -10px;
-            margin-bottom: -10px;
             @include make-row($gutter: 20px);
         }
     }
@@ -29,12 +27,12 @@
             @include make-col(6);
         }
 
-        @include media-breakpoint-up(md) {
+        @include media-breakpoint-up(lg) {
             @include make-col(4);
         }
 
         @include media-breakpoint-up(xl) {
-            @include make-col(3);
+            @include make-col(1, 5);
         }
     }
 
