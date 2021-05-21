@@ -8,6 +8,7 @@ a {
     line-height: 20px;
     text-decoration: none;
     display: block;
+    transition: opacity 0.15s ease-in-out;
 
     &:hover {
         color: $light;

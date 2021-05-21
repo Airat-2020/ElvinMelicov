@@ -165,7 +165,7 @@
         }
 
         @include media-breakpoint-up(xl) {
-            right: -20%;
+            right: -10%;
             bottom: 150px;
             left: auto;
             width: 240px * 2.5;
@@ -178,8 +178,8 @@
         position: relative;
         z-index: 1;
         max-width: 100%;
-        max-height: 100%;
-        transform: scale(1.25) translateX(40px);
+        max-height: 100vh;
+        transform: translateX(100px);
         transform-origin: bottom left;
 
         @include media-breakpoint-up(sm) {
