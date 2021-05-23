@@ -42,9 +42,7 @@
 
     &__button {
         display: block;
-        width: 265px;
         margin: 60px auto 0 auto;
-        padding: 15px;
 
         @include media-breakpoint-up(lg) {
             display: block;
