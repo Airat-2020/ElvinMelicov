@@ -1,0 +1,222 @@
+.about {
+    overflow: hidden;
+    background-color: $secondary;
+
+    &__inner {
+        @include media-breakpoint-up(lg) {
+            @include make-row($gutter: 40px);
+        }
+    }
+
+    &__left {
+        display: block;
+
+        @include media-breakpoint-up(lg) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            @include make-col-ready($gutter: 40px);
+            @include make-col(5, 12);
+        }
+    }
+
+    &__heading {
+        color: $light;
+        text-align: center;
+        margin-bottom: 100px;
+
+
+        &::after {
+            content: "";
+            display: block;
+            width: 120px;
+            height: 3px;
+            margin: 15px auto 0;
+            border-radius: 3px;
+            background-image: $strip-light;
+        }
+    }
+
+    &__decoration {
+        position: relative;
+        margin-bottom: 30px;
+        padding-top: 20px;
+
+        @include media-breakpoint-up(lg) {
+            margin: 0;
+        }
+
+        &::before {
+            content: "";
+            box-sizing: border-box;
+            display: block;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: -15px;
+            width: 75vw;
+            height: 75vw;
+            border: 15vw solid $light;
+            border-radius: 50%;
+            box-shadow: 0 0 150px $light,
+                inset 0 0 150px $light;
+
+            @include media-breakpoint-up(md) {
+                width: 50vw;
+                height: 50vw;
+                border: 10vw solid $light;
+            }
+
+            @include media-breakpoint-up(lg) {
+                width: 35vw;
+                height: 35vw;
+                border: 7vw solid $light;
+            }
+
+
+            @include media-breakpoint-up(xl) {
+                width: 460px;
+                height: 460px;
+                border: 95px solid $light;
+            }
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        z-index: 0;
+        bottom: 5px;
+        left: -50%;
+        width: 600px;
+        transform: translateX(7%);
+        pointer-events: none;
+
+        @include media-breakpoint-up(lg) {
+            bottom: -15%;
+            left: -250px;
+            width: auto;
+        }
+    }
+
+    &__logo {
+        color: $primary;
+        position: absolute;
+        z-index: 2;
+        top: 85px;
+        left: 0;
+        width: 105px;
+        height: 10px;
+        transform: rotate(90deg);
+
+        @include media-breakpoint-up(lg) {
+            z-index: 5;
+            top: 180px;
+            width: 207px;
+            height: 19px;
+        }
+    }
+
+    &__doctor {
+        position: relative;
+        z-index: 4;
+        right: 30px;
+        bottom: 0;
+        max-width: 100%;
+
+        @include media-breakpoint-up(lg) {
+            right: 0;
+            margin-top: auto;
+            margin-bottom: -50px;
+        }
+    }
+
+    &__info {
+        @include media-breakpoint-up(lg) {
+            @include make-col-ready($gutter: 40px);
+            @include make-col(7, 12);
+        }
+
+        section {
+            margin-bottom: 40px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__title {
+        color: $light;
+        text-align: center;
+        margin-bottom: 25px;
+        font-weight: 700;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 30px;
+            text-align: left;
+        }
+    }
+
+    &__description {
+        color: $light;
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 300;
+        margin-bottom: 0;
+        @include list-unstyled;
+
+        @include media-breakpoint-up(md) {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    &__list {
+        margin: 0 -25px;
+        padding-left: 40px;
+        list-style: none;
+
+        @include media-breakpoint-up(lg) {
+            padding-left: 0;
+            @include make-row($gutter: 20px);
+        }
+    }
+
+    &__item {
+        display: block;
+        position: relative;
+        margin: 25px;
+        font-family: $font-family-text-body;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 21px;
+        color: $light;
+
+        @include media-breakpoint-up(lg) {
+            margin: 0;
+            @include make-col-ready($gutter: 20px);
+            @include make-col(1, 5);
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: -35px;
+            width: 18px;
+            height: 9px;
+            border-radius: 1px;
+            border-left: 2px solid $light;
+            border-bottom: 2px solid $light;
+            transform: rotate(-55deg);
+
+            @include media-breakpoint-up(lg) {
+                position: relative;
+                left: 0;
+                width: 25px;
+                height: 13px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
