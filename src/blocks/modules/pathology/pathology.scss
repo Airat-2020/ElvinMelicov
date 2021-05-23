@@ -1,63 +1,84 @@
 .pathology {
     background-color: $gray-200;
-    padding: 50px 25px 100px 25px;
 
-    &__heading {
-        margin: 0 0 25px 0;
-        color: $primary;
-
+    .h2 {
         @include media-breakpoint-up(lg) {
-            width: auto;
-            margin: 0 auto 25px auto;
+            margin-right: auto;
+            margin-left: auto;
         }
     }
 
-    &__separator {
-        margin: 0 0 75px 0;
-    }
-
     &__list {
-        margin: -25px;
-        padding: 0;
-        list-style: none;
+        margin-bottom: -25px;
+        @include list-unstyled;
 
-        @include media-breakpoint-up(lg) {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: -10px;
+        @include media-breakpoint-up(sm) {
+            @include make-row($gutter: 20px);
         }
     }
 
     &__item {
-        box-shadow: -5px -5px 25px #ffffff,
-            5px 5px 30px rgba(13, 39, 80, 0.16);
-        border-radius: 12px;
-        padding-bottom: 28px;
-        margin: 25px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 25px;
+
+        @include media-breakpoint-up(sm) {
+            @include make-col-ready($gutter: 20px);
+            @include make-col(6);
+        }
 
         @include media-breakpoint-up(lg) {
-            flex-grow: 1;
-            position: relative;
-            width: 227px;
-            max-width: 400px;
-            margin: 10px;
+            @include make-col(4);
         }
 
-        img {
-            @include media-breakpoint-up(lg) {
-                width: 100%;
-            }
+        @include media-breakpoint-up(xl) {
+            @include make-col(1, 5);
         }
+    }
+
+    &__card {
+        flex-grow: 1;
+    }
+
+    &__button {
+        display: block;
+        margin: 60px auto 0 auto;
+
+        @include media-breakpoint-up(lg) {
+            display: block;
+            margin: 80px auto 0 auto;
+        }
+    }
+}
+
+.pathology-card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: -5px -5px 25px #ffffff,
+        5px 5px 30px rgba(13, 39, 80, 0.16);
+    border-radius: 12px;
+
+    &__img {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        padding: 0 10px 25px;
     }
 
     &__subheading {
         color: $primary;
         font-weight: 700;
-        margin: 0 13px 23px 13px;
+        margin-bottom: 20px;
     }
 
     &__link {
+        margin-top: auto;
         display: flex;
         align-items: center;
         position: relative;
@@ -66,11 +87,10 @@
         font-weight: 900;
         line-height: 17px;
         color: $secondary;
-        margin-left: 13px;
 
-        @include media-breakpoint-up(lg) {
-            position: absolute;
-            bottom: 20px;
+        &:hover {
+            color: $secondary;
+            opacity: 0.5;
         }
 
         &::before {
@@ -93,21 +113,5 @@
             border-bottom: 3px solid transparent;
             border-left: 5px solid $secondary;
         }
-    }
-
-    &__button {
-        display: block;
-        width: 265px;
-        margin: 60px auto 0 auto;
-        padding: 15px;
-
-        @include media-breakpoint-up(lg) {
-            display: block;
-            margin: 80px auto 0 auto;
-        }
-    }
-
-    @include media-breakpoint-up(lg) {
-        padding: 115px 25px;
     }
 }
