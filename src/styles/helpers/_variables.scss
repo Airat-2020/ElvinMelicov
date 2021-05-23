@@ -55,4 +55,6 @@ $icon-sizes: (
     @return map-get($icon-sizes, $key);
 }
 
+// PhotoSwiper vars
+$pswp__assets-path: "../img/" !default;
 
