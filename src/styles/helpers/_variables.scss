@@ -6,14 +6,16 @@ $font-family-text-body: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "
     "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
 
+$font-family-sans-serif: $font-family-text-body;
+
 // Переопределение стилей BootStrap
-$primary:       #152c5c;
-$secondary:     #048ad9;
-$success:       #13a546;
-$info:          #b1ddfd;
-$danger:        #e30613;
-$light:         #ffffff;
-$decoration:    #ffd7d9;
+$primary: #152c5c;
+$secondary: #048ad9;
+$success: #13a546;
+$info: #b1ddfd;
+$danger: #e30613;
+$light: #ffffff;
+$decoration: #ffd7d9;
 
 $gray-100: #f8f9fa;
 $gray-200: #efefef;
@@ -25,7 +27,32 @@ $gray-700: #495057;
 $gray-800: #343a40;
 $gray-900: #212529;
 
-$button-danger-shadow:  0 4px 0 #820e15;
+$button-danger-shadow: 0 4px 0 #820e15;
 $button-success-shadow: 0 4px 0 #136d33;
 
 $strip: linear-gradient(90deg, #0095e5 50%, #e30613 50%);
+$strip-light: linear-gradient(90deg, #ffffff 50%, #e30613 50%);
+
+/*
+  Размеры иконок
+*/
+
+$icon-sm: 20px;
+$icon-md: 24px;
+$icon-lg: 28px;
+$icon-xl: 36px;
+$icon-full: 100%;
+
+$icon-sizes: (
+    "sm": $icon-sm,
+    "md": $icon-md,
+    "lg": $icon-lg,
+    "xl": $icon-xl,
+    "full": $icon-full
+);
+
+@function icon-size($key: "md") {
+    @return map-get($icon-sizes, $key);
+}
+
+

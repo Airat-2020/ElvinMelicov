@@ -1,54 +1,63 @@
 <section class="promo">
     <div class="container">
         <div class="promo__inner">
-            <div class="container">
-                <div class="promo__heading-inner">
-                    <h1 class="promo__heading">
-                        <span class="h1">Меликов</span><br>
-                        <span class="h2">Эльвин Аббасалиевич</span>
-                    </h1>
-                </div>
-            </div>
-            <p class="p promo__about">
-                кандидат медицинских наук<br>
-                челюстно-лицевой хирург<br>
-                хирург-имплантолог
-            </p>
-            <picture class="promo__dr">
-                <source media="(min-width: 1350px)" srcset="../../../img/svg/dr-desktop.svg">
-                <img src="../../../img/svg/dr-mobile.svg" alt="" aria-hidden="true">
-            </picture>
-            <picture class="promo__doctor">
-                <source media="(min-width: 1350px)" srcset="../../../img/doctor-1-desktop.png">
-                <img src="../../../img/doctor-1-mobile.png" alt="Доктор Меликов">
-            </picture>
-            <picture class="promo__melicov">
-                <source media="(min-width: 1350px)" srcset="../../../img/svg/melikov-desktop.svg">
-                <img src="../../../img/svg/melicov-mobile.svg" alt="" aria-hidden="true">
-            </picture>
-            <form class="promo__form form">
-                <span class="form__span">
-                    Запишитесь на консультацию
-                </span>
-                <label class="form__label label-text label-text--light" for="name">
-                    Ваше имя
-                </label>
-                <input type="text" id="name" name="name" class="form__input input-text input-text--light" required>
-                <label class="form__label label-text label-text--light" for="tel">
-                    Ваш телефон
-                </label>
-                <input type="tel" id="tel" name="tel" class="form__input input-text input-text--light" required>
-                <input type="checkbox" id="checkbox" class="form__checkbox checkbox__input--light" required>
-                <label for="checkbox" class="form__label checkbox__label--light label-text--light">
-                    Я согласен с <a href="" class="form__link">политикой конфиденциальности</a>
-                </label>
-                <button type="submit" class="form__button btn btn-danger">
-                    Записаться
+            <div class="promo__info">
+                <h1 class="promo__heading">
+                    <span>Меликов</span>
+                    <span class="h2">Эльвин Аббасалиевич</span>
+                </h1>
+                <p class="p promo__description">
+                    кандидат медицинских наук<br>
+                    челюстно-лицевой хирург<br>
+                    хирург-имплантолог
+                </p>
+
+                <form class="promo__form form">
+                   <h3 class="form__heading">
+                        Запишитесь на консультацию
+                    </h3>
+                    <div class="form-group">
+                        <label class="form__label label-text label-text--light" for="name">
+                            Ваше имя
+                        </label>
+                        <input type="text" id="name" name="name" class="form__input input-text input-text--light" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form__label label-text label-text--light" for="tel">
+                            Ваш телефон
+                        </label>
+                        <input type="tel" id="tel" name="tel" class="form__input input-text input-text--light" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkbox" class="checkbox checkbox--light">
+                            <input type="checkbox" id="checkbox" class="checkbox__input" checked required>
+                            <span class="checkbox__title">
+                                Я согласен с <a href="" class="form__link"> политикой конфиденциальности</a>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="form__submit btn btn--lg btn-danger">
+                            Записаться
+                        </button>
+                    </div>
+                </form>
+                <button type="button" class="promo__button btn btn-danger">
+                    Записаться на прием
                 </button>
-            </form>
-            <button type="button" class="form__button btn btn-danger">
-                Записаться на прием
-            </button>
-           </div>
+            </div>
+            <div class="promo__decoration">
+                <svg class="promo__dr-sign icon icon-light">
+                    <use xlink:href="img/sprites/sprite.svg#doctor-sign"></use>
+                </svg>
+
+                <img src="../../../img/promo-doctor.png" class="promo__doctor" alt="Доктор Меликов">
+
+                <svg class="promo__melikov icon icon-light">
+                    <use xlink:href="img/sprites/sprite.svg#melikov"></use>
+                </svg>
+            </div>
+        </div>
     </div>
 </section>
