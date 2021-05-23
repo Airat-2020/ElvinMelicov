@@ -1,87 +1,32 @@
 .advantages {
     background-color: $gray-200;
-    padding-top: 10px;
-    padding-bottom: 70px;
-    overflow: hidden;
-
-    .container {
-        padding: 0;
-
-        @include media-breakpoint-up(lg) {
-            padding: 0 20px;
-        }
-    }
 
     &__inner {
-        @include media-breakpoint-up(lg) {
-            display: flex;
-            justify-content: space-between;
+        @include media-breakpoint-up(xl) {
+            @include make-row($gutter: 40px);
         }
     }
 
     &__info {
-        margin-bottom: 75px;
-        @include media-breakpoint-up(lg) {
-            margin-right: 50px;
+        margin-bottom: 50px;
+        @include media-breakpoint-up(xl) {
             @include make-col-ready($gutter: 40px);
             @include make-col(7);
         }
     }
 
-    &__list {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        margin: -25px;
-        padding: 0 10px 75px 10px;
-
-        @include media-breakpoint-up(lg) {
-            flex-wrap: wrap;
-            flex-direction: row;
-            width: 700px;
-            margin: -20px;
-            padding: 0;
-        }
-    }
-
-    &__item {
-        min-height: 300px;
-        margin: 25px;
-        padding: 10px 25px;
-        box-shadow: -5px -5px 25px $light,
-            5px 5px 30px rgba(13, 39, 80, 0.16);
-        border-radius: 12px;
-
-        @include media-breakpoint-up(lg) {
-            width: 300px;
-            margin: 20px;
-        }
-    }
-
-    &__title {
-        font-family: $font-family-heading;
-        font-size: 64px;
-        font-weight: 700;
-        line-height: 78px;
-        color: $secondary;
-        margin-bottom: 15px;
-    }
-
-    &__text {
-        font-weight: 400;
-        color: $primary;
-    }
-
-    &__doctor {
-        position: relative;
-        z-index: 1;
-    }
-
     &__decoration {
         text-align: right;
         position: relative;
+        overflow: hidden;
+        margin-right: -15px;
 
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up(md) {
+            text-align: center;
+            margin-right: -25px;
+        }
+
+        @include media-breakpoint-up(xl) {
             @include make-col-ready($gutter: 40px);
             @include make-col(5);
         }
@@ -92,94 +37,157 @@
             display: block;
             position: absolute;
             z-index: 0;
-            right: -20px;
-            bottom: 80px;
-            width: 330px;
-            height: 330px;
-            border: 80px solid $info;
+            top: 80px;
+            right: -10vw;
+            width: 105vw;
+            height: 105vw;
+            border: 25vw solid $info;
             border-radius: 50%;
 
+            @include media-breakpoint-up(md) {
+                right: auto;
+                left: 50%;
+                width: 60vw;
+                height: 60vw;
+                border: 15vw solid $info;
+                transform: translateX(-50%);
+            }
+
             @include media-breakpoint-up(lg) {
-                top: 100px;
-                right: 0;
-                bottom: 0;
-                width: 450px;
-                height: 450px;
-                border: 120px solid $info;
+                width: 35vw;
+                height: 35vw;
+                border: 7vw solid $info;
+            }
+
+
+            @include media-breakpoint-up(xl) {
+                width: 460px;
+                height: 460px;
+                border: 95px solid $info;
             }
         }
     }
 
+    &__list {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: -25px;
+        @include list-unstyled;
+
+        @include media-breakpoint-up(md) {
+            flex-direction: row;
+            @include make-row($gutter: 20px);
+        }
+    }
+
+    &__item {
+        margin-bottom: 25px;
+
+        @include media-breakpoint-up(md) {
+            @include make-col-ready($gutter: 20px);
+            @include make-col(6, 12);
+        }
+    }
+
+    &__title {
+        font-family: $font-family-heading;
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 1;
+        color: $secondary;
+        margin-bottom: 15px;
+    }
+
+    &__text {
+        line-height: 28px;
+        font-weight: 400;
+        margin-bottom: 0;
+        color: $primary;
+    }
+
+    &__doctor {
+        position: relative;
+        z-index: 1;
+    }
+
     &__description {
-        box-sizing: border-box;
         position: absolute;
-        z-index: 2;
+        z-index: 5;
         bottom: 35px;
-        width: 260px;
+        left: calc(50% - 7px);
         border: 1px solid rgba(255, 255, 255, 0.74);
-        padding: 15px 20px;
-        background: linear-gradient(116.34deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.6) 100%);
+        padding: 20px;
+        transform: translateX(-50%);
+        background-image: linear-gradient(116.34deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.6) 100%);
         box-shadow: 0 0 7px rgba(201, 201, 201, 0.1);
         backdrop-filter: blur(8px);
         border-radius: 10px;
         text-align: left;
 
-        .span {
+        @include media-breakpoint-up(xl) {
+            bottom: 100px;
+        }
+
+        span {
             display: block;
             color: $primary;
 
-            &-1 {
+            &:nth-child(1) {
                 font-family: $font-family-heading;
                 font-size: 18px;
-                font-weight: 800;
+                font-weight: 700;
                 line-height: 22px;
 
-                @include media-breakpoint-up(lg) {
+                @include media-breakpoint-up(xl) {
                     font-size: 24px;
                     line-height: 30px;
                 }
             }
 
-            &-2 {
+            &:nth-child(2) {
                 font-family: $font-family-heading;
                 font-size: 18px;
                 font-weight: 400;
                 line-height: 20px;
+                white-space: nowrap;
 
-                @include media-breakpoint-up(lg) {
+                @include media-breakpoint-up(xl) {
                     font-size: 24px;
                     line-height: 27px;
                 }
             }
 
-            &-3 {
+            &:nth-child(3) {
                 font-family: $font-family-text-body;
                 font-weight: 400;
                 font-size: 12px;
                 line-height: 18px;
 
-                @include media-breakpoint-up(lg) {
+                @include media-breakpoint-up(xl) {
                     font-size: 14px;
                     line-height: 21px;
                 }
             }
         }
-
-        @include media-breakpoint-up(lg) {
-            position: relative;
-            width: 330px;
-        }
     }
 
     &__button {
         display: block;
-        margin: 0 auto;
-        padding: 13px 6px;
+        margin: 25px auto 0;
         font-weight: 700;
 
-        @include media-breakpoint-up(lg) {
-            margin: 0 50% 0 20%;
-            padding: 16px 40px 12px 40px;
+        @include media-breakpoint-up(xl) {
+            position: absolute;
+            bottom: 50px;
+            left: 18%;
         }
     }
+}
+
+.advantages-card {
+    min-height: 225px;
+    padding: 20px;
+    box-shadow: -5px -5px 25px $light,
+        5px 5px 30px rgba(13, 39, 80, 0.16);
+    border-radius: 12px;
 }
