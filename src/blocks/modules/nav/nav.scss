@@ -93,12 +93,15 @@
         width: 100vw;
         height: 100vh;
         transform: translate3d(0, -100%, 0);
-        transition: transform 300ms ease-in-out;
         pointer-events: none;
         overflow-y: auto;
     }
 
-    &.show {
+    &.animation-enter {
+        transition: transform 300ms ease-in-out;
+    }
+
+    &.animation-active {
         transform: none;
         pointer-events: auto;
     }

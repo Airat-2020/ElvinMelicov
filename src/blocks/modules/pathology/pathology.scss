@@ -60,8 +60,20 @@
 
     &__img {
         display: block;
-        max-width: 100%;
-        max-height: 100%;
+        width: 100%;
+
+        &--cover {
+            @include media-breakpoint-down(sm) {
+                max-width: 100%;
+                object-fit: cover;
+                height: 230px;
+            }
+        }
+
+
+        @include media-breakpoint-down(sm) {
+            max-width: 300px;
+        }
     }
 
     &__info {
