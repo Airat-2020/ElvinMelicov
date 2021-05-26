@@ -41,7 +41,7 @@
             right: -10vw;
             width: 105vw;
             height: 105vw;
-            border: 25vw solid $info;
+            border: 100px solid $info;
             border-radius: 50%;
 
             @include media-breakpoint-up(md) {
