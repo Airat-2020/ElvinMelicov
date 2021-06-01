@@ -21,12 +21,14 @@ a {
 }
 
 .heading-separator {
+    content: "";
     display: block;
     width: 120px;
     height: 3px;
+    margin: 0;
+    border: none;
     border-radius: 3px;
     background-image: $strip;
-    border: none;
 }
 
 

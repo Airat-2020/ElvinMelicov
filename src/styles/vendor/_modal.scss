@@ -57,8 +57,10 @@
     justify-content: center;
     width: 100%;
     min-height: 100%;
+    margin: auto;
     padding: 10px 25px;
     margin: auto;
+    padding: 10px 15px;
 }
 .hystmodal__window {
     box-sizing: border-box;
@@ -103,8 +105,10 @@
         content: "";
         display: block;
         position: absolute;
-        background-color: $secondary;
         right: 7px;
+        width: 15px;
+        height: 1px;
+        background-color: $secondary;
     }
 
     &::before{
