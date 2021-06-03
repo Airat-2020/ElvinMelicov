@@ -28,6 +28,10 @@ a {
     border: none;
     border-radius: 3px;
     background-image: $strip;
+
+    &.heading-separator-light {
+        background-image: $strip-light;
+    }
 }
 
 .section {
@@ -35,7 +39,11 @@ a {
     padding-bottom: 60px;
 
     .heading-separator {
-        margin-bottom: 60px;
+        margin-bottom: 40px;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 60px;
+        }
     }
 
     @include media-breakpoint-up(lg) {
