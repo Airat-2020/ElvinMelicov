@@ -6,7 +6,6 @@ input {
 }
 
 .input-text {
-    @include text-body();
     display: block;
     border: none;
     border-bottom: 1px solid $primary;
@@ -17,6 +16,7 @@ input {
         border-bottom: 1px solid $light;
         color: $light;
     }
+    @include text-body();
 }
 
 $checkbox-size: 22px;
@@ -48,11 +48,11 @@ $checkbox-size: 22px;
         &::before {
             content: "";
             display: block;
-            width: $checkbox-size;
-            height: $checkbox-size;
             position: absolute;
             top: 0;
             left: 0;
+            width: $checkbox-size;
+            height: $checkbox-size;
             border-radius: 3px;
             background-color: $primary;
         }
@@ -85,8 +85,23 @@ $checkbox-size: 22px;
             }
         }
     }
+
+    &--light {
+        .checkbox__title {
+            color: $light;
+
+            &::before {
+                background-color: $light;
+            }
+
+            &::after {
+                border-left-color: $secondary;
+                border-bottom-color: $secondary;
+            }
+        }
+    }
 }
 
-.form-group{
+.form-group {
     margin-bottom: 25px;
 }
