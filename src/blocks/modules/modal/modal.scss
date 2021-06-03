@@ -1,3 +1,17 @@
+.pathology-modal {
+    h4 {
+        font-size: 18px;
+        font-weight: 900;
+        color: $primary;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 21px;
+        font-weight: 300;
+    }
+}
+
 .pathology-first-modal {
 
     &__logo {
@@ -15,7 +29,7 @@
     }
 
     &__info {
-        padding: 0 20px 40px 20px;
+        padding: 0 20px 30px;
 
         @include media-breakpoint-up(lg) {
             display: block;
@@ -24,14 +38,7 @@
     }
 
     &__subheading {
-        font-size: 18px;
-        font-weight: 900;
-        color: $primary;
         margin-bottom: 10px;
-    }
-
-    &__text {
-        margin: 0;
     }
 
     &__img-wrap {
@@ -39,14 +46,12 @@
             display: block;
         }
     }
-
     @include media-breakpoint-up(lg) {
         display: flex;
         max-width: 640px;
     }
 
     img {
-
         @include media-breakpoint-up(lg) {
             width: 308px;
             height: 293px;
@@ -80,16 +85,8 @@
     }
 
     &__subheading {
-        font-size: 18px;
-        font-weight: 900;
-        color: $primary;
         margin-bottom: 25px;
     }
-
-    &__text {
-        margin: 0;
-    }
-
     @include media-breakpoint-up(lg) {
         display: flex;
         max-width: 640px;
@@ -125,22 +122,21 @@
     }
 
     &__info {
-        padding: 0 20px 50px 20px;
+        padding: 0 20px 30px;
+
+        @include media-breakpoint-up(lg) {
+            padding: 0 20px 50px;
+        }
     }
 
     &__subheading {
-        font-size: 18px;
-        font-weight: 900;
-        color: $primary;
         margin-bottom: 20px;
     }
 
-    &__text {
-        margin: 0;
+    &__img-wrap {
+        margin-bottom: 20px;
     }
-
     @include media-breakpoint-up(lg) {
-        display: flex;
         max-width: 640px;
     }
 
@@ -176,14 +172,7 @@
     }
 
     &__subheading {
-        font-size: 18px;
-        font-weight: 900;
-        color: $primary;
         margin-bottom: 25px;
-    }
-
-    &__text {
-        margin: 0;
     }
 
     @include media-breakpoint-up(lg) {
@@ -211,26 +200,24 @@
         padding: 0 20px 25px 20px;
 
         @include media-breakpoint-up(lg) {
-            padding: 60px 20px 25px 75px;
+            width: 50%;
+            padding: 60px 20px 25px 0;
         }
     }
 
     &__subheading {
-        font-size: 18px;
-        font-weight: 900;
-        color: $primary;
         margin-bottom: 10px;
-
 
         @include media-breakpoint-up(lg) {
             margin-bottom: 20px;
         }
     }
 
-    &__text {
-        margin: 0;
+    &__img-wrap {
+        @include media-breakpoint-up(lg) {
+            width: 50%;
+        }
     }
-
     @include media-breakpoint-up(lg) {
         display: flex;
         max-width: 640px;
@@ -240,10 +227,16 @@
         display: block;
         margin-top: 15px;
         margin-bottom: 15px;
+        width: 100%;
 
         @include media-breakpoint-up(lg) {
             margin-top: 20px;
             margin-bottom: 10px;
         }
     }
+}
+
+.congress-modal {
+    padding: 20px;
+    background-color: $light;
 }
