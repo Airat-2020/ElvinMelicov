@@ -7,7 +7,7 @@
 .container {
     padding-left: 15px;
     padding-right: 15px;
-    max-width: 1170px;
+    max-width: 1280px;
     margin: 0 auto;
 
     @include media-breakpoint-up(md) {
@@ -24,10 +24,10 @@ a {
     display: block;
     width: 120px;
     height: 3px;
+    margin: 0;
+    border: none;
     border-radius: 3px;
     background-image: $strip;
-    border: none;
-    margin: 0;
 
     &--light{
         background-image: $strip-light;
