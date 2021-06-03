@@ -74,10 +74,8 @@
     "dependencies": {
         "bootstrap": "^4.6.0",
         "hystmodal": "^0.4.4",
+        "photoswipe": "^4.1.3",
         "swiper": "^6.6.1"
-        "hystmodal": "^0.4.4",
-        "photoswipe": "^4.1.3"
-        "hystmodal": "^0.4.4"
     },
     "husky": {
         "hooks": {

@@ -7,7 +7,7 @@
 .container {
     padding-left: 15px;
     padding-right: 15px;
-    max-width: 1170px;
+    max-width: 1280px;
     margin: 0 auto;
 
     @include media-breakpoint-up(md) {
@@ -21,7 +21,6 @@ a {
 }
 
 .heading-separator {
-    content: "";
     display: block;
     width: 120px;
     height: 3px;

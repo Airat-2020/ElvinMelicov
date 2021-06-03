@@ -58,8 +58,6 @@
     width: 100%;
     min-height: 100%;
     margin: auto;
-    padding: 10px 25px;
-    margin: auto;
     padding: 10px 15px;
 }
 .hystmodal__window {
@@ -98,10 +96,7 @@
     outline: none;
     border-radius: 50%;
 
-    &::before,
-    &::after{
-        width: 15px;
-        height: 1px;
+    &::before, &::after {
         content: "";
         display: block;
         position: absolute;
@@ -111,11 +106,11 @@
         background-color: $secondary;
     }
 
-    &::before{
+    &::before {
         transform: rotate(50deg);
     }
 
-    &::after{
+    &::after {
         transform: rotate(-50deg);
     }
 }
