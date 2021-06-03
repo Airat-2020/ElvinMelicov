@@ -1,196 +1,177 @@
-.consultations{
-  background-color: $secondary;
-  padding: 60px 25px 160px 25px;
-  position: relative;
+.consultations {
+    background-color: $secondary;
+    position: relative;
+    overflow: hidden;
 
-  .container{
-    @include media-breakpoint-up(lg) {
-      position: relative;
-    }
-  }
-
-  &__inner{
-    @include media-breakpoint-up(lg) {
-      display: flex;
-    }
-  }
-
-  &__heading{
-    color: $light;
-    margin-bottom: 35px;
-
-    @include media-breakpoint-up(lg) {
-      margin-bottom: 20px;
-    }
-  }
-
-  &__separator{
-    background: $strip-light;
-    margin: 0 auto 35px 0;
-
-    @include media-breakpoint-up(lg) {
-      margin-bottom: 30px;
-    }
-  }
-
-  &__description{
-    color: $light;
-    margin-bottom: 25px;
-
-    @include media-breakpoint-up(lg) {
-      margin-bottom: 30px;
-    }
-  }
-
-  &__contact{
-    @include media-breakpoint-up(lg) {
-      display: flex;
-    }
-  }
-
-  &__tel{
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 30px;
-    text-align: center;
-    margin-bottom: 40px;
-
-    @include media-breakpoint-up(lg) {
-      text-align: left;
-      margin-right: 30px;
-      margin-bottom: 0;
-    }
-  }
-
-  &__social{
-    display: flex;
-    justify-content: center;
-    margin: -15px -15px 35px -15px;
-
-    @include media-breakpoint-up(lg) {
-      margin-bottom: 0;
-    }
-  }
-
-  .social__item{
-    margin: 15px;
-  }
-
-  .form{
-
-    @include media-breakpoint-up(lg) {
-      box-shadow: -5px -5px 29px rgba(31, 180, 255, 0.69),
-                   5px 5px 30px #017dcd;
-      border-radius: 12px;
-      padding: 40px 30px 35px 30px;
-      min-width: 400px;
+    .container {
+        @include media-breakpoint-up(lg) {
+            position: relative;
+        }
     }
 
-    &__label{
-      font-size: 16px;
-      font-weight: 300;
-      line-height: 24px;
-      margin-bottom: 0;
+    .social__item {
+        margin: 15px;
     }
 
-    .textarea{
-      background-color: transparent;
-      border: none;
-      border-bottom: 1px solid $light;
-      outline: none;
-      resize: none;
-      min-height: 100px;
+    .form {
+
+        .textarea {
+            min-height: 100px;
+            border: none;
+            background-color: transparent;
+            border-bottom: 1px solid $light;
+            outline: none;
+        }
+
+        &__label {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 24px;
+            margin-bottom: 0;
+        }
+
+        &__file {
+            display: none;
+        }
+
+        @include media-breakpoint-up(lg) {
+            min-width: 400px;
+            padding: 40px 30px 35px 30px;
+            box-shadow: -5px -5px 29px rgba(31, 180, 255, 0.69),
+                5px 5px 30px #017dcd;
+            border-radius: 12px;
+        }
     }
 
-    &__file{
-      display: none;
-    }
-  }
+    .checkbox__title {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 20px;
 
-  .file{
-    margin-bottom: 0;
-
-   &__title{
-     color: $light;
-     font-weight: 300;
-     margin-left: 6px;
-   }
-  }
-
-  .checkbox__title{
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 20px;
-
-    a{
-      font-size: 14px;
-      font-weight: 300;
-      line-height: 20px;
-    }
-  }
-
-  &__bg{
-    position: absolute;
-    left: 20%;
-    bottom: 0;
-    mix-blend-mode: color-burn;
-    opacity: 0.5;
-
-    @include media-breakpoint-up(lg) {
-      width: 346px;
-      height: 372px;
-      left: 50px;
-    }
-  }
-
-  &__tool{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-
-    @include media-breakpoint-up(lg) {
-      width: 176px;
-      height: 191px;
-      left: 0;
-      bottom: -175px;
+        a {
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 20px;
+        }
     }
 
-    &::after{
-      content: "";
-      display: block;
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-      border-radius: 50%;
-      width: 100px;
-      height: 100px;
-      border: 25px solid $light;
-      border-top: 25px solid transparent;
-      filter: drop-shadow(0px 0px 150px #ffffff);
-      transform: rotate(-135deg);
+    &__inner {
+        @include media-breakpoint-up(lg) {
+            display: flex;
+        }
+    }
 
-      @include media-breakpoint-up(lg) {
-        width: 195px;
-        height: 195px;
-        border: 50px solid $light;
-        border-top: 50px solid transparent;
-        bottom: 40px;
-        left: 40px;
-      }
-  }
-}
+    &__heading {
+        color: $light;
+        margin-bottom: 35px;
 
-  &__logo{
-    display: none;
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__separator {
+        margin: 0 auto 35px 0;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__description {
+        color: $light;
+        margin-bottom: 25px;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__contact {
+        @include media-breakpoint-up(lg) {
+            display: flex;
+        }
+    }
+
+    &__tel {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 30px;
+        text-align: center;
+        margin-bottom: 40px;
+
+        @include media-breakpoint-up(lg) {
+            text-align: left;
+            margin-right: 30px;
+            margin-bottom: 0;
+            position: relative;
+            z-index: 10;
+        }
+    }
+
+    &__social {
+        display: flex;
+        justify-content: center;
+        margin: -15px -15px 35px -15px;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 0;
+            position: relative;
+            z-index: 10;
+        }
+    }
+
+    &__tel, .social__link {
+        transition: opacity 0.15s ease-out;
+
+        &:hover {
+            @include media-breakpoint-up(xl) {
+                opacity: 0.6;
+            }
+        }
+    }
+
+    &__bg {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        left: 20%;
+        mix-blend-mode: color-burn;
+        opacity: 0.5;
+
+        @include media-breakpoint-up(lg) {
+            left: 50px;
+            width: 346px;
+            height: 372px;
+        }
+    }
+
+    &__tool {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        @include media-breakpoint-up(lg) {
+            left: 0;
+        }
+    }
+
+    &__logo {
+        display: none;
+
+        @include media-breakpoint-up(lg) {
+            display: block;
+            position: absolute;
+            bottom: 35px;
+            left: 250px;
+            width: 375px;
+            height: 35px;
+            fill: $light;
+        }
+    }
 
     @include media-breakpoint-up(lg) {
-      display: block;
-      width: 375px;
-      height: 35px;
-      fill: $light;
-      position: absolute;
-      bottom: -80px;
-      left: 250px;
+        padding: 60px 25px 25px 25px;
     }
-  }
 }

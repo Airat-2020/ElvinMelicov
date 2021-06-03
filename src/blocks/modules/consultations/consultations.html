@@ -1,11 +1,11 @@
-<section class="consultations">
+<section class=" section consultations">
     <div class="container">
         <div class="consultations__inner">
             <div class="consultations__info">
                 <h2 class="consultations__heading">
                     Консультация
                 </h2>
-                <hr class="heading-separator consultations__separator">
+                <hr class="heading-separator heading-separator-light">
 
                 <p class="consultations__description p">
                     Для консультации позвоните мне по номеру
@@ -63,12 +63,12 @@
                         <textarea id="description" name="tel" class="textarea form__input input-text input-text--light" required></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="file" class="file file--light">
-                            <svg class="icon icon-sm icon-light">
+                        <label for="file" class="file-field mb-0">
+                            <svg class="icon icon-md icon-light">
                                 <use xlink:href="img/sprites/sprite.svg#plus"></use>
                             </svg>
-                            <input type="file" id="file" class="form__input form__file" checked required>
-                            <span class="file__title">
+                            <input type="file" id="file" class="file-field__input" checked required>
+                            <span class="file-field__title">
                                 <b>Прикрепить файл</b> (jpg, png, gif - не более 2Мб)
                             </span>
                         </label>
@@ -86,17 +86,13 @@
                     </button>
                 </form>
             </div>
-            <picture class="consultations__bg" aria-hidden="true">
-                <source media="(min-width: 992px)" srcset="../../../img/consultation-bg-desktop.png">
-                <img src="../../../img/consultation-bg.png" alt="">
-            </picture>
-            <picture class="consultations__tool" aria-hidden="true">
-                <source media="(min-width: 992px)" srcset="../../../img/consultation-dental-tool-desktop.png">
-                <img src="../../../img/consultation-dental-tool.png" alt="">
-            </picture>
-            <svg class="consultations__logo">
-                <use xlink:href="img/sprites/sprite.svg#logo"></use>
-            </svg>
+            <div class="consultations__decoration">
+                <img src="../../../img/consultation-bg.png" alt="" class="consultations__bg" aria-hidden="true">
+                <img src="../../../img/consultation-dental-tool.png" alt="" class="consultations__tool" aria-hidden="true">
+                <svg class="consultations__logo">
+                    <use xlink:href="img/sprites/sprite.svg#logo"></use>
+                </svg>
+            </div>
         </div>
     </div>
 </section>
