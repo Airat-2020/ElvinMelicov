@@ -28,6 +28,8 @@ $gray-400: #ced4da;
 //декоротивные элементы
 $gray-500: #c4c4c4;
 //
+$gray-400: rgba(196, 196, 196, 1);
+$gray-500: #adb5bd;
 $gray-600: #6c757d;
 $gray-700: #495057;
 $gray-800: #343a40;
@@ -37,6 +39,7 @@ $button-danger-shadow: 0 4px 0 #820e15;
 $button-success-shadow: 0 4px 0 #136d33;
 
 $strip: linear-gradient(90deg, #0095e5 50%, #e30613 50%);
+$strip-light: linear-gradient(90deg, #ffffff 50%, #e30613 50%);
 
 /*
   Размеры иконок
@@ -60,4 +63,6 @@ $icon-sizes: (
     @return map-get($icon-sizes, $key);
 }
 
+// PhotoSwiper vars
+$pswp__assets-path: "../img/" !default;
 

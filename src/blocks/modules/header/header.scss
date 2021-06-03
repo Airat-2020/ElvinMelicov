@@ -43,15 +43,6 @@
         @include media-breakpoint-up(md) {
             display: none;
         }
-
-        &::before {
-            content: "";
-            display: block;
-            width: 30px;
-            background-color: $white;
-            box-shadow: 0 -8px $white, 0 8px $white;
-            height: 3px;
-        }
     }
 
     &__close {
