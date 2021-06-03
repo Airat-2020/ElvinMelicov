@@ -14,6 +14,8 @@
     }
 
     .form {
+        max-width: 360px;
+        margin: 0 auto;
 
         .textarea {
             min-height: 100px;
@@ -35,7 +37,7 @@
         }
 
         @include media-breakpoint-up(lg) {
-            min-width: 400px;
+            max-width: 100%;
             padding: 40px 30px 35px 30px;
             box-shadow: -5px -5px 29px rgba(31, 180, 255, 0.69),
                 5px 5px 30px #017dcd;
@@ -57,7 +59,21 @@
 
     &__inner {
         @include media-breakpoint-up(lg) {
-            display: flex;
+            @include make-row($gutter: 30px);
+        }
+    }
+
+    &__info {
+        @include media-breakpoint-up(lg) {
+            @include make-col-ready($gutter: 30px);
+            @include make-col(8, 12);
+        }
+    }
+
+    &__form {
+        @include media-breakpoint-up(lg) {
+            @include make-col-ready($gutter: 30px);
+            @include make-col(4, 12);
         }
     }
 
@@ -131,37 +147,33 @@
         }
     }
 
-    &__bg {
+    &__decoration {
         display: none;
-        position: absolute;
-        bottom: 0;
-        left: 20%;
-        mix-blend-mode: color-burn;
-        opacity: 0.5;
 
         @include media-breakpoint-up(lg) {
-            left: 50px;
-            width: 346px;
-            height: 372px;
+            display: flex;
+            overflow: hidden;
         }
+    }
+
+    &__bg {
+        position: absolute;
+        bottom: 75px;
+        left: 50px;
+        mix-blend-mode: color-burn;
+        width: 346px;
+        height: 372px;
     }
 
     &__tool {
-        display: none;
         position: absolute;
-        bottom: 0;
-        left: 0;
-
-        @include media-breakpoint-up(lg) {
-            left: 0;
-        }
+        bottom: -166px;
+        left: -110px;
     }
 
     &__logo {
-        display: none;
 
         @include media-breakpoint-up(lg) {
-            display: block;
             position: absolute;
             bottom: 35px;
             left: 250px;
@@ -169,9 +181,5 @@
             height: 35px;
             fill: $light;
         }
-    }
-
-    @include media-breakpoint-up(lg) {
-        padding: 60px 25px 25px 25px;
     }
 }
