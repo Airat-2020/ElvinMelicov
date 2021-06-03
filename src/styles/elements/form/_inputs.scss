@@ -98,12 +98,12 @@ $checkbox-size: 24px;
 
 
     &__input {
-        @include text-body($color: $light);
         display: none;
+        @include text-body($color: $light);
     }
 
-    &__title{
-        @include text-body($color: $light, $fw: 300);
+    &__title {
         margin-left: 10px;
+        @include text-body($color: $light, $fw: 300);
     }
 }
