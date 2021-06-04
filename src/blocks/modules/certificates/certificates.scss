@@ -1,0 +1,103 @@
+.certificates {
+    background-color: $gray-200;
+    text-align: center;
+
+    .heading-separator {
+        @include media-breakpoint-down(md) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__list {
+        margin-bottom: -25px;
+        @include list-unstyled;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: -50px;
+            @include make-row($gutter: 40px);
+        }
+    }
+
+    &__item {
+        margin-bottom: 25px;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 50px;
+            @include make-col-ready($gutter: 40px);
+            @include make-col(6, 12);
+        }
+
+        &:nth-child(odd) {
+            .certificates__icon {
+                background-color: $info;
+            }
+        }
+
+        &:nth-child(even) {
+            .certificates__icon {
+                background-color: $decoration;
+            }
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: flex-start;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        text-align: left;
+        color: $primary;
+
+        &:hover {
+            color: $primary;
+        }
+
+        @include media-breakpoint-up(sm) {
+            align-items: center;
+        }
+
+        @include media-breakpoint-up(lg) {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    &__icon {
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        margin-right: 15px;
+
+        @include media-breakpoint-up(lg) {
+            width: 100px;
+            height: 100px;
+            margin-right: 25px;
+        }
+
+        svg {
+            width: 23px;
+            height: 30px;
+
+            @include media-breakpoint-up(lg) {
+                width: 49px;
+                height: 64px;
+            }
+        }
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        text-align: left;
+    }
+}
