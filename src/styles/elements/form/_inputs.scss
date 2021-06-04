@@ -6,7 +6,6 @@ input {
 }
 
 .input-text {
-    @include text-body();
     display: block;
     border: none;
     border-bottom: 1px solid $primary;
@@ -17,29 +16,16 @@ input {
         border-bottom: 1px solid $light;
         color: $light;
     }
+    @include text-body();
 }
 
-$checkbox-size: 22px;
+$checkbox-size: 24px;
 
 .checkbox {
     position: relative;
-    padding-left: $checkbox-size + 10px;
     line-height: 1;
+    padding-left: $checkbox-size + 10px;
 
-    &--light {
-        .checkbox__title {
-            color: $light;
-
-            &::before {
-                background-color: $light;
-            }
-
-            &::after {
-                border-left-color: $secondary;
-                border-bottom-color: $secondary;
-            }
-        }
-    }
     &__title {
         font-size: 12px;
         line-height: 14px;
@@ -47,11 +33,11 @@ $checkbox-size: 22px;
         &::before {
             content: "";
             display: block;
-            width: $checkbox-size;
-            height: $checkbox-size;
             position: absolute;
             top: 0;
             left: 0;
+            width: $checkbox-size;
+            height: $checkbox-size;
             border-radius: 3px;
             background-color: $primary;
         }
@@ -60,8 +46,8 @@ $checkbox-size: 22px;
             content: "";
             display: none;
             position: absolute;
-            top: 4px;
-            left: 4px;
+            top: 6px;
+            left: 5px;
             width: 14px;
             height: 9px;
             border-radius: 1px;
@@ -84,8 +70,40 @@ $checkbox-size: 22px;
             }
         }
     }
+
+    &--light {
+        .checkbox__title {
+            color: $light;
+
+            &::before {
+                background-color: $light;
+            }
+
+            &::after {
+                border-left-color: $secondary;
+                border-bottom-color: $secondary;
+            }
+        }
+    }
 }
 
-.form-group{
+.form-group {
     margin-bottom: 25px;
+}
+
+
+
+.file-field {
+    display: flex;
+
+
+    &__input {
+        display: none;
+        @include text-body($color: $light);
+    }
+
+    &__title {
+        margin-left: 10px;
+        @include text-body($color: $light, $fw: 300);
+    }
 }

@@ -1,0 +1,97 @@
+<section class=" section consultations">
+    <div class="container">
+        <div class="consultations__inner">
+            <div class="consultations__info">
+                <h2 class="consultations__heading">
+                    Консультация
+                </h2>
+                <hr class="heading-separator heading-separator-light">
+
+                <p class="consultations__description p">
+                    Для консультации позвоните мне по номеру
+                    либо оставьте свои данные для обратной связи.
+                    Также вы можете прикрепить файл со
+                    снимком или документом, описывающим ваш случай.
+                </p>
+                <div class="consultations__contact">
+                    <a class="consultations__tel" href="tel:+79057002525">
+                        +7 (905) 700 25 25
+                    </a>
+                    <ul class="social consultations__social">
+                        <li class="social__item">
+                            <a href="#" class="social__link">
+                                <svg class="icon icon-xl">
+                                    <use xlink:href="img/sprites/sprite.svg#whatsapp"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#" class="social__link">
+                                <svg class="icon icon-xl">
+                                    <use xlink:href="img/sprites/sprite.svg#viber"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#" class="social__link">
+                                <svg class="icon icon-xl">
+                                    <use xlink:href="img/sprites/sprite.svg#telegram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="consultations__decoration">
+                    <img src="../../../img/consultation-bg.png" alt="" class="consultations__bg" aria-hidden="true">
+                    <img src="../../../img/consultation-dental-tool.png" alt="" class="consultations__tool" aria-hidden="true">
+                    <svg class="consultations__logo">
+                        <use xlink:href="img/sprites/sprite.svg#logo"></use>
+                    </svg>
+                </div>
+            </div>
+            <form class="consultations__form form">
+                <div class="form-group">
+                    <label class="form__label label-text label-text--light" for="name">
+                        Ваше имя
+                    </label>
+                    <input type="text" id="name" name="name" class="form__input input-text input-text--light" required>
+                </div>
+                <div class="form-group">
+                    <label class="form__label label-text label-text--light" for="tel">
+                        Ваш телефон
+                    </label>
+                    <input type="tel" id="tel" name="tel" class="form__input input-text input-text--light" required>
+                </div>
+                <div class="form-group">
+                    <label class="form__label label-text label-text--light" for="description">
+                        Описание патологии
+                    </label>
+                    <textarea id="description" name="tel" class="textarea form__input input-text input-text--light" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="file" class="file-field mb-0">
+                        <svg class="icon icon-md icon-light">
+                            <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                        </svg>
+                        <input type="file" id="file" class="file-field__input" checked required>
+                        <span class="file-field__title">
+                                <b>Прикрепить файл</b> (jpg, png, gif - не более 2Мб)
+                            </span>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="checkbox-2" class="checkbox checkbox--light">
+                        <input type="checkbox" id="checkbox-2" class="checkbox__input" checked required>
+                        <span class="checkbox__title">
+                                Я согласен с <a href="" class="form__link"> политикой конфиденциальности</a>
+                            </span>
+                    </label>
+                </div>
+                <button type="submit" class="form__submit btn btn--lg btn-danger">
+                    Отправить
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
