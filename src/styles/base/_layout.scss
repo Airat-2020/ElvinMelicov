@@ -28,25 +28,12 @@ a {
     border: none;
     border-radius: 3px;
     background-image: $strip;
-}
 
-.section {
-    padding-top: 60px;
-    padding-bottom: 60px;
-
-    .heading-separator {
-        margin-bottom: 60px;
-    }
-
-    @include media-breakpoint-up(lg) {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-
-    h2 {
-        margin-bottom: 25px;
+    &.heading-separator-light {
+        background-image: $strip-light;
     }
 }
+
 
 .section {
     padding-top: 60px;

@@ -9,6 +9,7 @@
 
 @each $size, $value in $icon-sizes {
     .icon-#{$size} {
+        min-width: $value !important;
         width: $value !important;
         height: $value !important;
     }

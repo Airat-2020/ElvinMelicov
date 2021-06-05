@@ -19,12 +19,13 @@ input {
     @include text-body();
 }
 
-$checkbox-size: 22px;
+$checkbox-size: 24px;
 
 .checkbox {
     position: relative;
-    padding-left: $checkbox-size + 10px;
     line-height: 1;
+    padding-left: $checkbox-size + 10px;
+
     &__title {
         font-size: 12px;
         line-height: 14px;
@@ -45,8 +46,8 @@ $checkbox-size: 22px;
             content: "";
             display: none;
             position: absolute;
-            top: 4px;
-            left: 4px;
+            top: 6px;
+            left: 5px;
             width: 14px;
             height: 9px;
             border-radius: 1px;
@@ -88,4 +89,21 @@ $checkbox-size: 22px;
 
 .form-group {
     margin-bottom: 25px;
+}
+
+
+
+.file-field {
+    display: flex;
+
+
+    &__input {
+        display: none;
+        @include text-body($color: $light);
+    }
+
+    &__title {
+        margin-left: 10px;
+        @include text-body($color: $light, $fw: 300);
+    }
 }
