@@ -28,7 +28,12 @@ a {
     border: none;
     border-radius: 3px;
     background-image: $strip;
+
+    &.heading-separator-light {
+        background-image: $strip-light;
+    }
 }
+
 
 .section {
     padding-top: 60px;

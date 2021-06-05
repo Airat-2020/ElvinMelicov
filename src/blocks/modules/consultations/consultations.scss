@@ -1,0 +1,185 @@
+.consultations {
+    background-color: $secondary;
+    position: relative;
+    overflow: hidden;
+
+    .container {
+        @include media-breakpoint-up(lg) {
+            position: relative;
+        }
+    }
+
+    .social__item {
+        margin: 15px;
+    }
+
+    .form {
+        max-width: 360px;
+        margin: 0 auto;
+
+        .textarea {
+            min-height: 100px;
+            border: none;
+            background-color: transparent;
+            border-bottom: 1px solid $light;
+            outline: none;
+        }
+
+        &__label {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 24px;
+            margin-bottom: 0;
+        }
+
+        &__file {
+            display: none;
+        }
+
+        @include media-breakpoint-up(lg) {
+            max-width: 100%;
+            padding: 40px 30px 35px 30px;
+            box-shadow: -5px -5px 29px rgba(31, 180, 255, 0.69),
+                5px 5px 30px #017dcd;
+            border-radius: 12px;
+        }
+    }
+
+    .checkbox__title {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 20px;
+
+        a {
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 20px;
+        }
+    }
+
+    &__inner {
+        @include media-breakpoint-up(lg) {
+            @include make-row($gutter: 30px);
+        }
+    }
+
+    &__info {
+        @include media-breakpoint-up(lg) {
+            @include make-col-ready($gutter: 30px);
+            @include make-col(8, 12);
+        }
+    }
+
+    &__form {
+        @include media-breakpoint-up(lg) {
+            @include make-col-ready($gutter: 30px);
+            @include make-col(4, 12);
+        }
+    }
+
+    &__heading {
+        color: $light;
+        margin-bottom: 35px;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__separator {
+        margin: 0 auto 35px 0;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__description {
+        color: $light;
+        margin-bottom: 25px;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__contact {
+        @include media-breakpoint-up(lg) {
+            display: flex;
+        }
+    }
+
+    &__tel {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 30px;
+        text-align: center;
+        margin-bottom: 40px;
+
+        @include media-breakpoint-up(lg) {
+            text-align: left;
+            margin-right: 30px;
+            margin-bottom: 0;
+            position: relative;
+            z-index: 10;
+        }
+    }
+
+    &__social {
+        display: flex;
+        justify-content: center;
+        margin: -15px -15px 35px -15px;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 0;
+            position: relative;
+            z-index: 10;
+        }
+    }
+
+    &__tel, .social__link {
+        transition: opacity 0.15s ease-out;
+
+        &:hover {
+            @include media-breakpoint-up(xl) {
+                opacity: 0.6;
+            }
+        }
+    }
+
+    &__decoration {
+        display: none;
+
+        @include media-breakpoint-up(lg) {
+            display: flex;
+            overflow: hidden;
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        bottom: 75px;
+        left: 50px;
+        mix-blend-mode: color-burn;
+        width: 346px;
+        height: 372px;
+    }
+
+    &__tool {
+        position: absolute;
+        bottom: -166px;
+        left: -110px;
+    }
+
+    &__logo {
+
+        @include media-breakpoint-up(lg) {
+            position: absolute;
+            bottom: 35px;
+            left: 250px;
+            width: 375px;
+            height: 35px;
+            fill: $light;
+        }
+    }
+}
