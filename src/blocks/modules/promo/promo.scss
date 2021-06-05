@@ -1,7 +1,7 @@
 .promo {
     display: flex;
     position: relative;
-    min-height: calc(100vh - 51px);
+    min-height: 500px;
     background-color: $secondary;
     background-image: url("../../../img/promo-bg-mobile.png");
     background-repeat: no-repeat;
@@ -231,10 +231,6 @@
         @include media-breakpoint-up(lg) {
             display: block;
         }
-    }
-
-    @include isIOS {
-        min-height: -webkit-fill-available;
     }
 
     @include media-breakpoint-up(md) {
