@@ -1,35 +1,21 @@
-import Swiper from 'swiper/bundle';
-new Swiper(".swiper-container",{
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
+import SwiperCore, { Swiper, Keyboard, Pagination} from 'swiper/core';
 
+// Install modules
+SwiperCore.use([Pagination, Keyboard]);
+
+new Swiper(".js-works-slider",{
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
 
-    // loop: true,
-
     initialSlide: 2,
 
     grabCursor: true,
 
-    slideToClickedSlide: true,
-
-    hashNavigation: {
-        watchState: true,
-    },
-
     keyboard: {
         enabled: true,
         pageUpDown: true,
-    },
-
-    mousewheel: {
-        sensitivity: 1,
-        eventsTarget: ".works__slider",
     },
 
     centeredSlides: true,
@@ -39,8 +25,16 @@ new Swiper(".swiper-container",{
             slidesPerView: 2,
         },
 
-        1200: {
+        1024: {
             slidesPerView: 3,
+        },
+
+        1440: {
+            slidesPerView: 4,
+        },
+
+        1920: {
+            slidesPerView: 5,
         },
     },
 });

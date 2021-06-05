@@ -1,11 +1,21 @@
+/* stylelint-disable plugin/selector-bem-pattern */
 .works {
     background-color: $gray-200;
-    overflow: hidden;
 
+    .heading-separator {
+        margin-right: auto;
+        margin-left: auto;
+    }
 
-    .p {
+    figcaption {
+        color: $primary;
         font-weight: 400;
-        margin: 20px 25px 30px 25px;
+        font-size: 14px;
+        line-height: 21px;
+
+        @include media-breakpoint-down(sm) {
+            padding: 20px;
+        }
 
         span {
             display: block;
@@ -13,154 +23,76 @@
         }
     }
 
-    .swiper {
-        &-wrapper {
-            @include media-breakpoint-up(md) {
-                margin: -10px;
-            }
+    .swiper-pagination {
+        display: flex;
+        justify-content: center;
+        min-height: 35px;
+        margin: 10px -10px -10px;
+
+        @include media-breakpoint-up(md) {
+            margin: 20px -10px -10px;
         }
+    }
 
-        &-slide {
-            color: $primary;
+    .swiper-pagination-bullet {
+        display: block;
+        width: 15px;
+        height: 15px;
+        margin: 10px;
+        border-radius: 50%;
+        background-color: $gray-500;
 
-            @include media-breakpoint-up(md) {
-                margin: 10px;
-            }
-
-            svg {
-                position: absolute;
-                z-index: 5;
-                top: 30%;
-                left: 48%;
-            }
-
-            &-active {
-
-                svg, .works__img::before, .works__img::after {
-                    display: none;
-                }
-            }
-        }
-
-        &-pagination {
-            display: flex;
-            justify-content: center;
-            margin: -10px;
-
-            @include media-breakpoint-up(xl) {
-                display: none;
-            }
-        }
-
-        &-pagination-bullet {
-            display: block;
-            width: 15px;
-            height: 15px;
-            margin: 10px;
-            border-radius: 50%;
-            background-color: $gray-500;
-
-            &-active {
-                background-color: $primary;
-            }
+        &.swiper-pagination-bullet-active {
+            background-color: $primary;
         }
     }
 
     &__heading {
-        display: block;
-        margin: 0 auto;
-        color: $primary;
         text-align: center;
-    }
-
-    &__slider {
-        display: flex;
-        padding: 0;
-    }
-
-    &__slide {
-        display: block;
-        position: relative;
-        min-width: 100%;
-
-
-        @include media-breakpoint-up(md) {
-            width: calc(50% - 20px);
-            min-width: calc(50% - 20px);
-        }
-
-        @include media-breakpoint-up(xl) {
-            width: 30%;
-            min-width: 460px;
-        }
-    }
-
-    &__img {
-        position: relative;
-        min-height: 215px;
-        
-        @include media-breakpoint-up(md) {
-            min-width: calc(50% - 20px);
-            min-height: 310px;
-        }
-
-        @include media-breakpoint-up(xl) {
-            width: 100%;
-            min-height: 310px;
-        }
-
-        &::after {
-            @include media-breakpoint-up(xl) {
-                content: "";
-                display: block;
-                position: absolute;
-                z-index: 2;
-                width: 100%;
-                height: 100%;
-                background-image: url("../../../img/works-bg.png");
-                background-repeat: no-repeat;
-            }
-        }
-
-        &::before {
-            @include media-breakpoint-up(xl) {
-                content: "";
-                display: block;
-                position: absolute;
-                z-index: 3;
-                width: 100%;
-                height: 100%;
-                background-color: $light;
-                opacity: 0.75;
-            }
-        }
-        
-        img {
-            position: absolute;
-            top: 0;
-            right: 0;
-            height: 100%;
-            overflow: hidden;
-        }
-    }
-
-    &__before {
-        z-index: 0;
-        width: 100%;
-    }
-
-    &__after {
-        z-index: 1;
-        width: 50%;
     }
 
     &__button {
         display: none;
 
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up(md) {
             display: block;
-            margin: 50px auto 0 auto;
-            padding: 16px 35px 12px 35px;
+            margin: 50px auto 0;
+        }
+    }
+}
+
+.works-slider {
+    &__slide {
+        display: block;
+        position: relative;
+        @include media-breakpoint-up(md) {
+            @include make-col-ready($gutter: 20px);
+            @include make-col(1, 2);
+        }
+        @include media-breakpoint-up(lg) {
+            @include make-col(1, 3);
+        }
+        @include media-breakpoint-up(xl) {
+            @include make-col(1, 4);
+        }
+        @include media-breakpoint-up(xxl) {
+            @include make-col(1, 5);
+        }
+    }
+
+    &__link {
+        display: block;
+        position: relative;
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: 25px;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            max-height: 100%;
         }
     }
 }
