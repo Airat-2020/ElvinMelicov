@@ -1,40 +1,26 @@
-import Swiper from 'swiper/bundle';
-new Swiper(".reviews__swiper",{
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
+import SwiperCore, { Swiper, Keyboard, Pagination} from 'swiper/core';
 
+// Install modules
+SwiperCore.use([Pagination, Keyboard]);
+
+new Swiper(".reviews__swiper",{
     pagination: {
         el: ".swiper-pagination",
             clickable: true,
     },
 
-    // loop: true,
-
     initialSlide: 2,
 
-        grabCursor: true,
+    grabCursor: true,
 
-        slideToClickedSlide: true,
+    slideToClickedSlide: true,
 
-        hashNavigation: {
-        watchState: true,
-    },
+    centeredSlides: true,
 
     keyboard: {
         enabled: true,
             pageUpDown: true,
     },
-
-    mousewheel: {
-        sensitivity: 1,
-            eventsTarget: ".reviews__swiper",
-    },
-
-    centeredSlides: true,
-
-    // loop: true,
 
     breakpoints: {
 
