@@ -23,30 +23,6 @@
         }
     }
 
-    .swiper-pagination {
-        display: flex;
-        justify-content: center;
-        min-height: 35px;
-        margin: 10px -10px -10px;
-
-        @include media-breakpoint-up(md) {
-            margin: 20px -10px -10px;
-        }
-    }
-
-    .swiper-pagination-bullet {
-        display: block;
-        width: 15px;
-        height: 15px;
-        margin: 10px;
-        border-radius: 50%;
-        background-color: $gray-500;
-
-        &.swiper-pagination-bullet-active {
-            background-color: $primary;
-        }
-    }
-
     &__heading {
         text-align: center;
     }
@@ -94,5 +70,29 @@
             max-width: 100%;
             max-height: 100%;
         }
+    }
+}
+
+.swiper-pagination {
+    display: flex;
+    justify-content: center;
+    min-height: 35px;
+    margin: 20px -10px -10px;
+
+    @include media-breakpoint-up(md) {
+        margin: 40px -10px -10px;
+    }
+}
+
+.swiper-pagination-bullet {
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin: 10px;
+    border-radius: 50%;
+    background-color: $gray-500;
+
+    &.swiper-pagination-bullet-active {
+        background-color: $primary;
     }
 }

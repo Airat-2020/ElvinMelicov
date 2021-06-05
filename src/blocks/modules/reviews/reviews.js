@@ -3,19 +3,15 @@ import SwiperCore, { Swiper, Keyboard, Pagination} from 'swiper/core';
 // Install modules
 SwiperCore.use([Pagination, Keyboard]);
 
-new Swiper(".reviews__swiper",{
+new Swiper(".js-reviews-slider",{
     pagination: {
         el: ".swiper-pagination",
             clickable: true,
     },
 
-    initialSlide: 2,
-
     grabCursor: true,
 
     slideToClickedSlide: true,
-
-    centeredSlides: true,
 
     keyboard: {
         enabled: true,
@@ -27,13 +23,11 @@ new Swiper(".reviews__swiper",{
         768: {
             slidesPerView: 2,
             slidesPerGroup: 2,
-            centeredSlides: false,
         },
 
-        1200: {
+        1024: {
             slidesPerView: 3,
             slidesPerGroup: 3,
-            centeredSlides: false,
         },
     },
 });
