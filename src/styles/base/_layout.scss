@@ -45,6 +45,7 @@ a {
         @include media-breakpoint-up(lg) {
             margin-bottom: 60px;
         }
+
     }
 
     @include media-breakpoint-up(lg) {
@@ -52,11 +53,7 @@ a {
         padding-bottom: 50px;
     }
 
-    .heading-separator {
-        margin-bottom: 60px;
-    }
-
-    h2{
+    h2 {
         margin-bottom: 25px;
     }
 }

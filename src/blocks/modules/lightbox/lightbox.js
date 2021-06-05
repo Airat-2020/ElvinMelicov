@@ -61,7 +61,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 
         // find root element of slide
         var clickedListItem = closest(eTarget, function(el) {
-            return (el.tagName && el.tagName.toUpperCase() === 'LI');
+            return (el.tagName && el.tagName.toUpperCase() === 'LI' || el.tagName.toUpperCase() === 'FIGURE');
         });
 
 
@@ -206,3 +206,4 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 
 // execute above function
 initPhotoSwipeFromDOM('.js-congress-gallery');
+initPhotoSwipeFromDOM('.js-works-gallery');
