@@ -228,6 +228,10 @@
     &__form {
         display: none;
 
+        .form-group {
+            max-width: 340px;
+        }
+
         @include media-breakpoint-up(lg) {
             display: block;
         }
@@ -252,10 +256,6 @@
     margin-top: auto;
     margin-bottom: auto;
     position: relative;
-
-    .form-group {
-        max-width: 340px;
-    }
 
     &__heading {
         color: $light;

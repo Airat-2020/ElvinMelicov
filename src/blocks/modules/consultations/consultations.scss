@@ -13,38 +13,6 @@
         margin: 15px;
     }
 
-    .form {
-        max-width: 360px;
-        margin: 0 auto;
-
-        .textarea {
-            min-height: 100px;
-            border: none;
-            background-color: transparent;
-            border-bottom: 1px solid $light;
-            outline: none;
-        }
-
-        &__label {
-            font-size: 16px;
-            font-weight: 300;
-            line-height: 24px;
-            margin-bottom: 0;
-        }
-
-        &__file {
-            display: none;
-        }
-
-        @include media-breakpoint-up(lg) {
-            max-width: 100%;
-            padding: 40px 30px 35px 30px;
-            box-shadow: -5px -5px 29px rgba(31, 180, 255, 0.69),
-                5px 5px 30px #017dcd;
-            border-radius: 12px;
-        }
-    }
-
     .checkbox__title {
         font-size: 14px;
         font-weight: 300;
@@ -71,7 +39,15 @@
     }
 
     &__form {
+        max-width: 360px;
+        margin: 0 auto;
+
         @include media-breakpoint-up(lg) {
+            max-width: 100%;
+            padding: 40px 30px 35px 30px;
+            box-shadow: -5px -5px 29px rgba(31, 180, 255, 0.69),
+                5px 5px 30px #017dcd;
+            border-radius: 12px;
             @include make-col-ready($gutter: 30px);
             @include make-col(4, 12);
         }
@@ -181,5 +157,30 @@
             height: 35px;
             fill: $light;
         }
+    }
+}
+
+.form {
+    .textarea {
+        min-height: 100px;
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px solid $primary;
+        outline: none;
+
+        &--light {
+            border-bottom: 1px solid $light;
+        }
+    }
+
+    &__label {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 24px;
+        margin-bottom: 0;
+    }
+
+    &__file {
+        display: none;
     }
 }
