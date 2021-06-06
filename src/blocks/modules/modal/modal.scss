@@ -245,100 +245,60 @@
 .consultation-modal {
     background-color: $light;
     position: relative;
+    max-width: 500px;
+    padding: 30px 15px 30px;
+
+    .heading-separator {
+        margin-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     .form {
-        padding: 30px 20px 50px 20px;
-        color: $primary;
+        width: 100%;
 
-        .heading-separator {
-            margin-bottom: 30px;
+        &__label {
+            color: $primary;
         }
 
-        .file__title {
-            font-size: 12px;
-            font-weight: 300;
-            line-height: 18px;
-            margin-left: 10px;
-
-            @include media-breakpoint-up(lg) {
-                font-size: 16px;
-                line-height: 24px;
-            }
+        &__input {
+            color: $primary;
+            border-bottom-color: $primary;
         }
 
         &__heading {
             color: $primary;
-        }
-
-        &__file {
-            display: none;
+            text-align: center;
+            margin-bottom: 15px;
         }
 
         &__link {
             color: $primary;
             border-bottom: 1px solid $primary;
         }
-
-        @include media-breakpoint-up(lg) {
-            padding: 20px 60px 30px 60px;
-        }
     }
 
-    &__img-wrap {
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         position: relative;
+        padding-top: 70px;
 
-        &::after {
-            content: "";
-            display: block;
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            border-radius: 50%;
-            width: 65px;
-            height: 65px;
-            border: 15px solid $secondary;
-            border-top: 15px solid transparent;
-            filter: drop-shadow(0 0 150px #ffffff);
-            transform: rotate(-90deg);
-            mix-blend-mode: multiply;
-
-            @include media-breakpoint-up(lg) {
-                top: 25px;
-                left: 20px;
-                width: 195px;
-                height: 195px;
-                border: 50px solid $secondary;
-                border-top: 50px solid transparent;
-            }
+        @include media-breakpoint-up(lg) {
+            padding-top: 150px;
         }
     }
 
     &__bg {
-        width: 82px;
-        height: 88px;
-        margin-top: 5px;
-        margin-left: 30px;
-
-        @include media-breakpoint-up(lg) {
-            width: auto;
-            height: auto;
-            margin-top: 30px;
-            margin-left: 65px;
-        }
-    }
-
-    &__tool {
         position: absolute;
-        top: 15px;
-        left: 0;
-        width: 60px;
-        height: 65px;
+        top: -20px;
+        left: -20px;
+        max-height: 160px;
 
         @include media-breakpoint-up(lg) {
-            top: 20px;
-            left: 0;
-            width: auto;
-            height: auto;
+            left: -40px;
+            max-height: 350px;
         }
     }
 
@@ -346,42 +306,35 @@
         fill: $secondary;
         width: 170px;
         height: 15px;
-        margin-top: 50px;
+        margin-bottom: 30px;
 
         @include media-breakpoint-up(lg) {
             width: 200px;
             height: 18px;
-            margin-top: 100px;
+            margin-bottom: 70px;
+            margin-left: auto;
         }
     }
-}
 
-.thank {
-    color: $primary;
-    padding: 60px 20px;
-    text-align: center;
-
-    h4 {
-        font-size: 24px;
-        line-height: 30px;
-        margin-bottom: 10px;
+    @include media-breakpoint-up(lg) {
+        padding: 40px;
     }
 
-    span {
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 24px;
-        display: block;
-        margin-bottom: 30px;
-    }
+    &.consultation-modal-thank {
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
 
-    button {
-        font-family: $font-family-text-body;
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 25px;
-        text-align: center;
-        padding: 12px 40px;
-        border-radius: 35px;
+        .btn {
+            margin-top: 10px;
+            border-radius: 35px;
+        }
+
+        p {
+            font-size: 14px;
+            color: $primary;
+        }
     }
 }

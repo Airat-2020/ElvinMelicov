@@ -278,52 +278,56 @@
             <button data-hystclose class="hystmodal__close">Закрыть</button>
 
             <div class="consultation-modal">
-
-                <div class="consultation-modal__img-wrap">
+                <header class="consultation-modal__header">
                     <img class="consultation-modal__bg" src="../../../img/consultation-modal-bg.png" alt="" aria-hidden="true">
-                    <img class="consultation-modal__tool" src="../../../img/dentist-tool.png" alt="" aria-hidden="true">
                     <svg class="consultation-modal__logo" aria-label="Логотип: Dr. Эльвин Меликов">
                         <use xlink:href="img/sprites/sprite.svg#logo"></use>
                     </svg>
-                </div>
 
-                <form class="consultation-modal__form form">
                     <h3 class="form__heading">
                         Запишитесь на консультацию
                     </h3>
                     <hr class="heading-separator">
+                </header>
+
+                <form class="consultation-modal__form form">
                     <div class="form-group">
-                        <label class="form__label label-text" for="name">
+                        <label class="form__label label-text label-text--light" for="consultation-name">
                             Ваше имя
                         </label>
-                        <input type="text" id="name" name="name" class="form__input input-text" required>
+                        <input type="text" id="consultation-name" name="name" class="form__input input-text input-text--light" required>
                     </div>
                     <div class="form-group">
-                        <label class="form__label label-text" for="tel">
+                        <label class="form__label label-text label-text--light" for="consultation-tel">
                             Ваш телефон
                         </label>
-                        <input type="tel" id="tel" name="tel" class="form__input input-text" required>
+                        <input type="tel" id="consultation-tel" name="tel" class="form__input input-text input-text--light" required>
                     </div>
                     <div class="form-group">
-                        <label for="file" class="file label-file">
-                            <svg class="icon icon-sm">
+                        <label class="form__label label-text label-text--light" for="description">
+                            Описание патологии
+                        </label>
+                        <textarea id="description" name="tel" class="textarea form__input input-text input-text--light" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="file" class="file-field mb-0">
+                            <svg class="icon icon-md icon-primary">
                                 <use xlink:href="img/sprites/sprite.svg#plus"></use>
                             </svg>
-                            <input type="file" id="file" class="form__input form__file" checked required>
-                            <span class="file__title">
+                            <input type="file" id="file" class="file-field__input" checked required>
+                            <span class="file-field__title text-primary">
                                 <b>Прикрепить файл</b> (jpg, png, gif - не более 2Мб)
                             </span>
                         </label>
                     </div>
                     <div class="form-group">
-                        <label for="checkbox" class="checkbox">
-                            <input type="checkbox" id="checkbox" class="checkbox__input" checked required>
+                        <label for="consultation-modal-checkbox" class="checkbox">
+                            <input type="checkbox" id="consultation-modal-checkbox" class="checkbox__input" checked required>
                             <span class="checkbox__title">
                                 Я согласен с <a href="" class="form__link"> политикой конфиденциальности</a>
                             </span>
                         </label>
                     </div>
-
                     <button type="submit" class="form__submit btn btn--lg btn-danger" data-hystmodal="#thank">
                         Записаться
                     </button>
@@ -339,13 +343,13 @@
         <div class="hystmodal__window" role="dialog" aria-modal="true">
             <button data-hystclose class="hystmodal__close">Закрыть</button>
 
-            <div class="thank">
+            <div class="consultation-modal consultation-modal-thank">
                 <h4>
                     Благодарим за обращение!
                 </h4>
-                <span>
+                <p>
                     В ближайщее время с Вами свяжуться
-                </span>
+                </p>
                 <button type="button" class="btn btn-success" data-hystclose>
                     ок
                 </button>
