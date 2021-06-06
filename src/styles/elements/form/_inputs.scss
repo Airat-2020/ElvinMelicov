@@ -51,8 +51,8 @@ $checkbox-size: 24px;
             width: 14px;
             height: 9px;
             border-radius: 1px;
-            border-left: 3px solid $secondary;
-            border-bottom: 3px solid $secondary;
+            border-left: 3px solid $light;
+            border-bottom: 3px solid $light;
             transform: rotate(-55deg);
         }
     }
@@ -70,6 +70,7 @@ $checkbox-size: 24px;
             }
         }
     }
+
 
     &--light {
         .checkbox__title {
