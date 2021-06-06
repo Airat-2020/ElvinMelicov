@@ -13,6 +13,8 @@ new Swiper(".js-works-slider",{
 
     grabCursor: true,
 
+    loop: true,
+
     keyboard: {
         enabled: true,
         pageUpDown: true,

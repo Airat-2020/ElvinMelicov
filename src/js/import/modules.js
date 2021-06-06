@@ -6,3 +6,4 @@ import "%modules%/map/map";
 import "%modules%/footer/footer";
 import "%modules%/modal/modal"
 import "%modules%/lightbox/lightbox"
+import "%modules%/slider/slider"
