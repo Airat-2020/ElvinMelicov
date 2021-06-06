@@ -14,12 +14,8 @@
         background-color: $secondary;
 
         .container {
-            @include media-breakpoint-up(sm) {
+            @include media-breakpoint-between(sm, sm) {
                 max-width: 300px;
-            }
-
-            @include media-breakpoint-up(md) {
-                max-width: 100%;
             }
         }
     }
