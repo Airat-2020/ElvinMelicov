@@ -1,6 +1,6 @@
 let mainNav = document.querySelector(".main-nav");
 let buttonOpen = document.querySelector(".js-open-menu");
-let buttonClose = document.querySelector(".js-close-menu");
+let buttonsClose = document.querySelectorAll(".js-close-menu");
 
 buttonOpen.addEventListener("click", function () {
     mainNav.classList.add("animation-enter");
@@ -10,11 +10,12 @@ buttonOpen.addEventListener("click", function () {
     }, 0)
 })
 
-buttonClose.addEventListener("click", function () {
+buttonsClose.forEach(btn => btn.addEventListener("click", closeMenu));
+
+function closeMenu() {
     mainNav.classList.remove("animation-active");
 
     setTimeout(() => {
         mainNav.classList.remove("animation-enter");
     }, 300);
-});
-
+}
