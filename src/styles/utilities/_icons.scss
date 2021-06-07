@@ -1,0 +1,16 @@
+/*
+  Размеры иконок
+*/
+
+.icon {
+    fill: currentColor;
+    transition: fill 0.15s ease-out;
+}
+
+@each $size, $value in $icon-sizes {
+    .icon-#{$size} {
+        min-width: $value !important;
+        width: $value !important;
+        height: $value !important;
+    }
+}

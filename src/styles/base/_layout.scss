@@ -1,0 +1,59 @@
+/* stylelint-disable plugin/selector-bem-pattern */
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 1280px;
+    margin: 0 auto;
+
+    @include media-breakpoint-up(md) {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.heading-separator {
+    display: block;
+    width: 120px;
+    height: 3px;
+    margin: 0;
+    border: none;
+    border-radius: 3px;
+    background-image: $strip;
+
+    &.heading-separator-light {
+        background-image: $strip-light;
+    }
+}
+
+
+.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    .heading-separator {
+        margin-bottom: 40px;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 60px;
+        }
+
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    h2 {
+        margin-bottom: 25px;
+    }
+}

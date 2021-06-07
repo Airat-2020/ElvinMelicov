@@ -1,0 +1,23 @@
+/*
+  стили заголовков
+*/
+
+h1, .h1 {
+    color: $primary;
+    @include main-headline();
+}
+
+h2, .h2 {
+    color: $primary;
+    @include headline();
+}
+
+h3, .h3 {
+    color: $primary;
+    @include title();
+}
+
+h4, .h4 {
+    color: $primary;
+    @include subheading();
+}

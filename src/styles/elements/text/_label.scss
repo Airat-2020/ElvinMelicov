@@ -1,0 +1,41 @@
+/*
+  Стили для лейблов
+*/
+.label-text {
+    font-family: $font-family-text-body;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    display: block;
+    color: $primary;
+
+    &--light {
+        color: $light;
+    }
+
+    @include media-breakpoint-up(md) {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+    }
+}
+
+.label-file {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+
+    @include media-breakpoint-up(md) {
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 300;
+    }
+
+    &::before {
+        content: "";
+        margin-right: 11px;
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}

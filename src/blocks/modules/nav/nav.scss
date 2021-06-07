@@ -1,0 +1,108 @@
+.nav {
+    &__list {
+        margin: 0;
+        padding: 25px 0 25px 0;
+        list-style: none;
+        text-align: center;
+
+        @include media-breakpoint-up(md) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__item {
+        margin-bottom: 25px;
+
+        @include media-breakpoint-up(md) {
+            margin-right: 5vw;
+            margin-bottom: 0;
+        }
+    }
+
+    &__link {
+        font-family: $font-family-text-body;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 28px;
+
+        &:hover {
+            @include media-breakpoint-up(xl) {
+                opacity: 0.6;
+            }
+        }
+
+        @include media-breakpoint-up(md) {
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+}
+
+.main-nav {
+    background-color: $secondary;
+
+    &__logo {
+        display: block;
+
+        svg {
+            fill: $light;
+            width: 170px;
+            height: 15px;
+        }
+    }
+
+    &__header {
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        @include media-breakpoint-up(md) {
+            display: none;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 30px;
+
+        @include media-breakpoint-up(md) {
+            display: none;
+        }
+    }
+
+    &__social {
+        margin: 10px 0 0 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        transform: translate3d(0, -100%, 0);
+        pointer-events: none;
+        overflow-y: auto;
+    }
+
+    &.animation-enter {
+        transition: transform 300ms ease-in-out;
+    }
+
+    &.animation-active {
+        transform: none;
+        pointer-events: auto;
+    }
+}

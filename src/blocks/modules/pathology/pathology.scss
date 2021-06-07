@@ -1,0 +1,128 @@
+.pathology {
+    background-color: $gray-200;
+
+    .h2 {
+        @include media-breakpoint-up(lg) {
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+
+    &__list {
+        margin-bottom: -25px;
+        @include list-unstyled;
+
+        @include media-breakpoint-up(sm) {
+            @include make-row($gutter: 20px);
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 25px;
+
+        @include media-breakpoint-up(sm) {
+            @include make-col-ready($gutter: 20px);
+            @include make-col(6);
+        }
+
+        @include media-breakpoint-up(lg) {
+            @include make-col(4);
+        }
+
+        @include media-breakpoint-up(xl) {
+            @include make-col(1, 5);
+        }
+    }
+
+    &__card {
+        flex-grow: 1;
+    }
+
+    &__button {
+        display: block;
+        margin: 60px auto 0 auto;
+
+        @include media-breakpoint-up(lg) {
+            display: block;
+            margin: 80px auto 0 auto;
+        }
+    }
+}
+
+.pathology-card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: -5px -5px 25px #ffffff,
+        5px 5px 30px rgba(13, 39, 80, 0.16);
+    border-radius: 12px;
+
+    &__img {
+        display: block;
+        width: 100%;
+
+        @include media-breakpoint-down(sm) {
+            max-width: 300px;
+        }
+
+        &.pathology-card__img--cover {
+            @include media-breakpoint-down(sm) {
+                max-width: 100%;
+                object-fit: cover;
+                height: 230px;
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        padding: 0 10px 25px;
+    }
+
+    &__subheading {
+        color: $primary;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    &__link {
+        margin-top: auto;
+        display: flex;
+        align-items: center;
+        position: relative;
+        font-family: $font-family-heading;
+        font-size: 14px;
+        font-weight: 900;
+        line-height: 17px;
+        color: $secondary;
+
+        &:hover {
+            color: $secondary;
+            opacity: 0.5;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 25px;
+            height: 2px;
+            margin-left: 120px;
+            background-color: $secondary;
+        }
+
+        &::after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            width: 0;
+            height: 0;
+            margin-left: 145px;
+            border-top: 3px solid transparent;
+            border-bottom: 3px solid transparent;
+            border-left: 5px solid $secondary;
+        }
+    }
+}

@@ -1,0 +1,110 @@
+/* stylelint-disable plugin/selector-bem-pattern */
+
+input {
+    border: none;
+    background-color: transparent;
+}
+
+.input-text {
+    display: block;
+    border: none;
+    border-bottom: 1px solid $primary;
+    color: $primary;
+    border-radius: 0;
+
+    &--light {
+        border-bottom: 1px solid $light;
+        color: $light;
+    }
+    @include text-body();
+}
+
+$checkbox-size: 24px;
+
+.checkbox {
+    position: relative;
+    line-height: 1;
+    padding-left: $checkbox-size + 10px;
+
+    &__title {
+        font-size: 12px;
+        line-height: 14px;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: $checkbox-size;
+            height: $checkbox-size;
+            border-radius: 3px;
+            background-color: $primary;
+        }
+
+        &::after {
+            content: "";
+            display: none;
+            position: absolute;
+            top: 6px;
+            left: 5px;
+            width: 14px;
+            height: 9px;
+            border-radius: 1px;
+            border-left: 3px solid $light;
+            border-bottom: 3px solid $light;
+            transform: rotate(-55deg);
+        }
+    }
+
+    &__input {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        pointer-events: none;
+
+        &:checked {
+            & ~ .checkbox__title::after {
+                display: block;
+            }
+        }
+    }
+
+
+    &--light {
+        .checkbox__title {
+            color: $light;
+
+            &::before {
+                background-color: $light;
+            }
+
+            &::after {
+                border-left-color: $secondary;
+                border-bottom-color: $secondary;
+            }
+        }
+    }
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+
+
+.file-field {
+    display: flex;
+
+
+    &__input {
+        display: none;
+        @include text-body($color: $light);
+    }
+
+    &__title {
+        margin-left: 10px;
+        @include text-body($color: $light, $fw: 300);
+    }
+}

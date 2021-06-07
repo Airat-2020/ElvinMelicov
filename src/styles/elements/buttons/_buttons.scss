@@ -1,0 +1,55 @@
+/* stylelint-disable plugin/selector-bem-pattern */
+
+.btn {
+    font-family: $font-family-heading;
+    font-weight: 700;
+    border-radius: 0;
+    background-color: transparent;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    user-select: none;
+    border: none;
+    padding: 15px 20px;
+    font-size: 16px;
+    line-height: 1;
+
+    @include media-breakpoint-up(lg) {
+        font-size: 20px;
+        padding: 15px 30px;
+    }
+
+    &-sm {
+        padding: 10px 20px;
+    }
+
+    &-danger {
+        background: linear-gradient(180deg, #f0515e 30%, #e30613 70%);
+        color: $light;
+        box-shadow: $button-danger-shadow;
+        border-radius: 35px;
+    }
+
+    &-success {
+        color: $light;
+        background: linear-gradient(180deg, #2ec061 30%, #13a546 70%);
+        box-shadow: $button-success-shadow;
+    }
+}
+
+.btn-link {
+    font-family: $font-family-heading;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 17px;
+    color: $info;
+    border-radius: 0;
+    background-color: transparent;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    user-select: none;
+    border: none;
+}
