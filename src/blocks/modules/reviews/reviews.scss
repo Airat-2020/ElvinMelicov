@@ -136,6 +136,8 @@
         font-size: 14px;
         line-height: 17px;
         color: $gray-600;
+        background-color: transparent;
+        box-shadow: none;
 
         > span {
             display: block;
@@ -168,6 +170,7 @@
 
     &--modal {
         max-width: 640px;
+        box-shadow: none;
     }
 }
 
